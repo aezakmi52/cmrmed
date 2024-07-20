@@ -360,7 +360,153 @@ header {
     margin-top: 20px;
 }
 
+footer {
+    background-color: #fff;
+    padding: 20px;
+}
 
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-item {
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-item img {
+    width: 50%;
+}
+
+.footer-item a:hover {
+    color: rgb(93, 141, 93);
+}
+
+.footer-contact-telephone  {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.footer-contact-telephone img {
+    width: 5%;
+}
+
+.title {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 5%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin: 5% 0;
+}
+
+.store-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.wrapper nav {
+    width: 600px;
+    padding: 10px;
+    position: sticky;
+    top: 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+
+.wrapper nav ul {
+    border-bottom: 1px solid rgb(95, 95, 95);
+    line-height: 30px;
+}
+
+.wrapper nav h1 {
+    text-align: center;
+    font-size: 25px;
+    padding: 10px;
+}
+
+.wrapper nav h2 {
+    color: rgb(93, 141, 93);
+}
+
+.wrapper nav ul li {
+    padding-left: 10px;
+}
+
+.wrapper nav ul li:hover {
+    background: rgb(93, 141, 93);
+    color: #fff;
+}
+
+.store {
+    display: flex;
+    justify-content: space-between;
+}
+
+.store-card {
+    width: 28%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+
+.store-card:hover {
+    box-shadow: 0 0 12px rgba(93, 141, 93, 1);
+}
+
+.store-card img {
+    width: 100%;
+    height: 60%;
+    object-fit: contain;
+}
+
+.product-wrapper {
+    display: flex;
+    gap: 50px;
+    margin-top: 5%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+
+.product-desc h1 {
+    font-size: 30px;
+    line-height: 40px;
+}
+.product-desc p {
+    margin: 20px 0;
+}
+
+.product-desc ul {
+    line-height: 30px;
+}
+
+.description {
+    margin-top: 5%;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+
+.description h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
 
 
 
