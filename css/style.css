@@ -71,6 +71,10 @@ button:hover{
 
 /* header */
 
+.menu {
+    display: none;
+}
+
 header {
     background-color: rgba(255, 255, 255, 1);
     position: sticky;
@@ -152,7 +156,6 @@ header {
     color: #fff;
     font-size: 3em;
     line-height: 80px;
-
 }
 
 .carousel-item img {
@@ -216,14 +219,13 @@ header {
     gap: 50px;
     padding: 40px 20px;
     background-image: url('../img/bg-abouttt-2.webp');
-    /* font-weight: 500; */
     border-radius: 30px;
     box-shadow: 0px 0px 10px  rgba(0, 0, 0, .3);
 }
 
 .about img {
     border-radius: 30px;
-    width: 530px;
+    width: 40%;
     height: 100%;
 }
 
@@ -354,11 +356,19 @@ header {
     outline: none;
     border: 1px solid #e1e1e1;
     margin-top: 10px; 
+    color: rgb(93, 141, 93);
+    
+}
+
+.feedback input::placeholder {
+    color: rgba(0, 0, 0, .3);
 }
 
 .feedback button {
     margin-top: 20px;
 }
+
+/* футер */
 
 footer {
     background-color: #fff;
@@ -396,6 +406,8 @@ footer {
     width: 5%;
 }
 
+/* страница каталога */
+
 .title {
     text-align: center;
     font-size: 50px;
@@ -416,7 +428,7 @@ footer {
 }
 
 .wrapper nav {
-    width: 600px;
+    width: 800px;
     padding: 10px;
     position: sticky;
     top: 20px;
@@ -471,14 +483,23 @@ footer {
     object-fit: contain;
 }
 
-.product-wrapper {
-    display: flex;
-    gap: 50px;
+/* страница товара*/
+
+.product {
     margin-top: 5%;
     background-color: #fff;
     padding: 20px;
     border-radius: 30px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+
+.product-wrapper {
+    display: flex;
+    gap: 50px;
+}
+
+.product-wrapper img {
+    object-fit: contain;
 }
 
 .product-desc h1 {
@@ -495,10 +516,7 @@ footer {
 
 .description {
     margin-top: 5%;
-    background-color: #fff;
     padding: 40px;
-    border-radius: 30px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
 }
 
 .description h1 {
@@ -506,6 +524,226 @@ footer {
     text-align: center;
     font-size: 30px;
     margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 430px) {
+    /* index */
+
+    .carousel-images {
+        width: 100%;
+    }
+
+    .carousel-item {
+        width: 100%;
+    }
+
+    .carousel-item h1 {
+        font-size: 2em;
+        width: 90%;
+        line-height: 60px;
+    }
+
+    .about {
+        flex-direction: column;
+        margin: 0 5%;
+    }
+
+    .about img {
+        width: 100%;
+    }
+
+    .about h1 {
+        text-align: center;
+    }
+
+    .plus {
+        flex-direction: column;
+        padding: 0 5%;
+    }
+
+    .plus-item {
+        width: 100%;
+        margin-bottom: 5%;
+    }
+
+    .cards-wrapper {
+        flex-direction: column;
+        padding: 0 5%;
+    }
+
+    .cards-wrapper a {
+        width: 100%;
+        margin-bottom: 5%;
+
+    }
+
+    .cards-wrapper-2 {
+        flex-direction: column;
+        padding: 0 5%;
+        margin-top: 0;
+    }
+
+    .cards-wrapper-2 a {
+        width: 100%;
+        margin-bottom: 5%;
+        
+    }
+
+    .feedback {
+        width: 100%;
+        text-align: center;
+        padding: 20px 10px;
+    }
+
+    .feedback form div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .feedback form div input {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* header*/
+
+    .menu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+
+    .burger-checkbox {
+        position: absolute;
+        visibility: hidden;
+    }
+      
+    .burger {
+        position: relative;
+        z-index: 1;
+        cursor: pointer;
+        display: block;
+        position: relative;
+        border: none;
+        background: transparent;
+        width: 40px;
+        height: 26px;
+      }
+      
+    .burger::before,
+    .burger::after {
+        content: '';
+        left: 0;
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 4px;
+        border-radius: 10px;
+        background: #000;
+      }
+      
+    .burger::before {
+        top: 0;
+        box-shadow: 0 11px 0 #000;
+        transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
+      }
+      
+    .burger::after {
+        bottom: 0;
+        transition: bottom .3s .15s, transform .3s;
+      }
+      
+    .burger-checkbox:checked + .burger::before {
+        top: 11px;
+        transform: rotate(45deg);
+        box-shadow: 0 6px 0 rgba(0,0,0,0);
+        transition: box-shadow .15s, top .3s, transform .3s .15s;
+      }
+      
+    .burger-checkbox:checked + .burger::after {
+        bottom: 11px;
+        transform: rotate(-45deg);
+        transition: bottom .3s, transform .3s .15s;
+      }
+      
+    .menu-list {
+        top: -20px;
+        left: -20px;
+        position: absolute;
+        display: grid;
+        gap: 12px;
+        padding: 42px 0;
+        margin: 0;
+        background: rgb(93, 141, 93);
+        list-style-type: none;
+        transform: translateX(-100%);
+        transition: .3s;
+        width: 300px;
+      }
+      
+    .menu-item {
+        display: block;
+        padding: 8px;
+        color: white;
+        font-size: 18px;
+        text-align: center;
+        text-decoration: none;
+      }
+
+    .menu {
+        display: block;
+    }
+      
+    .header-inner {
+        padding: 20px;
+    }  
+
+    .burger-checkbox:checked ~ .menu-list {
+        transform: translateX(0);
+      }
+
+    .header-inner-bot {
+        display: none;
+    }
+
+    .header-contact {
+        flex-direction: column;
+    }
+
+    .logo {
+        width: 40%;
+    }
+
+    .header-inner-top  img{
+        width: 40%;
+    }
+
+    .header-contact-telephone img {
+        width: 10%;
+    }
+
+    /* footer*/
+
+    .footer-wrapper {
+        flex-direction: column;
+    }
+
+    .footer-item {
+        text-align: center;
+        width: 100%;
+        margin-top: 5%;
+    }
+
+    .footer-item img {
+        align-self: center;
+    }
+
+    .footer-contact-telephone {
+        justify-content: center;
+    }
+
 }
 
 
