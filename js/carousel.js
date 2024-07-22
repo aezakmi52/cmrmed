@@ -28,6 +28,3 @@ setInterval(nextSlide, 5000);
 window.addEventListener('resize', () => showSlide(currentIndex)); 
 
 showSlide(currentIndex);
-
-/* burger*/
-

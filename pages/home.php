@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title></title>
-</head>
 <body>
     <div class="carousel">
         <div class="carousel-images">
@@ -75,25 +67,25 @@
             <div class="cards">
                 <h1>Диагностика</h1>
                 <div class="cards-wrapper">
-                    <a href="#">
+                    <a href="?page=store">
                         <img src="img/uslugi-1.png" alt="">
                         <h2>ПЦР тест системы</h2>
                     </a>
-                    <a href="#">
+                    <a href="?page=store">
                         <img src="img/uslugi-2.webp" alt="">
                         <h2>ИФА тест системы</h2>
                     </a>
-                    <a href="#">
+                    <a href="?page=store">
                         <img src="img/uslugi-3.jpg" alt="">
                         <h2>Питательные среды</h2>
                     </a>
                 </div>
                 <div class="cards-wrapper-2">
-                    <a href="#">
+                    <a href="?page=store">
                         <img src="img/uslugi-4.jpg" alt="">
                         <h2>Оборудование</h2>
                     </a>
-                    <a href="#">
+                    <a href="?page=store">
                         <img src="img/uslugi-5.png" alt="">
                         <h2>Экспресс-тесты</h2>
                     </a>
@@ -114,6 +106,6 @@
                 </form>
             </div>
         </div>
-    <script src="js/scripts.js"></script>
+    <script src="js/carousel.js"></script>
 </body>
 </html>
