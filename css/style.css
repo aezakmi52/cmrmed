@@ -409,7 +409,7 @@ footer {
 /* страница каталога */
 
 .store-page {
-    margin-right: 15%;
+    margin-right: 10%;
     margin-left: 2%;
 }
 
@@ -437,12 +437,6 @@ footer {
     margin: 5% 0;
 }
 
-.store-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-}
-
 .filter-container {
     position: relative;
     display: inline-block;
@@ -463,8 +457,8 @@ footer {
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
     padding: 15px;
     z-index: 1;
-    min-width: 200px;
-    width: 100%;
+    min-width: 400px;
+    max-width: 400px;
     border-radius: 30px;
 }
 
@@ -489,27 +483,25 @@ footer {
     width: 50%;
 }
 
-
-.filter-dropdown.show {
-    display: block;
-}
-
 .filter-dropdown option {
     color: rgb(93, 141, 93);
 }
 
 .store {
     display: flex;
+    flex-wrap: wrap;
     gap: 50px;
 }
 
 .store-card {
-    width: 28%;
-    min-width: 300px;
+    width: calc(28%);
+    min-width: 350px;
     background-color: #fff;
     padding: 20px;
     border-radius: 30px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    min-height: 530px;
+    max-height: 530px;
 }
 
 .store-card:hover {
@@ -520,6 +512,10 @@ footer {
     width: 100%;
     height: 60%;
     object-fit: contain;
+}
+
+.store-card h1 {
+    height: 30%;
 }
 
 /* страница товара*/
@@ -544,6 +540,7 @@ footer {
 .product-desc h1 {
     font-size: 30px;
     line-height: 40px;
+    color: rgb(93, 141, 93);
 }
 .product-desc p {
     margin: 20px 0;
@@ -794,12 +791,6 @@ footer {
         flex-direction: column;
     }
 
-    .wrapper nav {
-        width: 100%;
-        position: relative;
-        display: none;
-    }
-
     .store {
         flex-direction: column;
         padding: 0 20px;
@@ -808,6 +799,7 @@ footer {
 
     .store-card {
         width: 100%;
+
     }
 
     .filter-container {

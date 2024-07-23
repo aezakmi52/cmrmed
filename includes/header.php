@@ -14,10 +14,10 @@
         <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
         <label for="burger-checkbox" class="burger"></label>
         <ul class="menu-list">
-            <li><a href="?page=store" class="menu-item">Главная</a><li>
-            <li><a href="?page=store" class="menu-item">О нас</a><li>
-            <li><a href="?page=store" class="menu-item">Команда</a><li>
-            <li><a href="?page=store" class="menu-item">Контакты</a><li>
+            <li><a href="?page=store&type=" class="menu-item">Главная</a><li>
+            <li><a href="?page=store&type" class="menu-item">О нас</a><li>
+            <li><a href="?page=store&type" class="menu-item">Команда</a><li>
+            <li><a href="?page=store&type" class="menu-item">Контакты</a><li>
         </ul>
     </div>
     <div class="container">
@@ -40,12 +40,12 @@
                 <nav>
                     <ul>
                         <a href="?page=home">Главная</a>    
-                        <a href="?page=store">ИФА</a>
-                        <a href="?page=store">ПЦР</a>
-                        <a href="?page=store">Экспресс тесты</a>
-                        <a href="?page=store">Питательные среды</a>
-                        <a href="?page=store">Оборудование</a>
-                        <a href="?page=store">Контакты</a>
+                        <a href="?page=store&type=ИФА">ИФА</a>
+                        <a href="?page=store&type=ПЦР">ПЦР</a>
+                        <a href="?page=store&type=Экспресс тесты">Экспресс тесты</a>
+                        <a href="?page=store&type=Пит. среды">Питательные среды</a>
+                        <a href="?page=store&type=Оборудование">Оборудование</a>
+                        <a href="?page=store&type">Контакты</a>
                     </ul>
                 </nav>
             </div>

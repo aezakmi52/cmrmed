@@ -3,23 +3,25 @@
         <input type="text" id="search-input" placeholder="Поиск">
         <button class="search-btn" id="search-btn">Найти</button>
     </div>
-    <div class="title">ИФА</div>
+
+    <?php
+            if (isset($_GET['type'])) {
+            $type = $_GET['type'];
+            $sql = "SELECT * FROM baza WHERE type='$type'";
+            $result = $conn->query($sql);
+
+            if ($result === false) {
+                echo "Error: " . $conn->error;
+            } else { 
+                if ($result->num_rows > 0) {
+                    $item = $result->fetch_assoc();
+    ?>
+    <div class="title"><?php echo htmlspecialchars($item['type']);?></div>
     <div class="store-page">
         <div class="wrapper">  
             <div class="filter-container">
                 <button class="filter-btn" id="filter-btn">Фильтр</button>
                 <div class="filter-dropdown" id="filter-dropdown">
-                    <div class="filter-section">
-                        <label for="category">Вид товара</label>
-                        <select id="category">
-                            <option value="all">Все</option>
-                            <option value="ifa">ИФА</option>
-                            <option value="pcr">ПЦР</option>
-                            <option value="express">Экспресс-тесты</option>
-                            <option value="oboryd">Оборудование</option>
-                            <option value="sredi">Питательные среды</option>
-                        </select>
-                    </div>
                     <div class="filter-section">
                         <label for="manufacturer">Производитель</label>
                         <select id="manufacturer">
@@ -49,32 +51,43 @@
                     </div>
                     <button class="apply-filters-btn" id="apply-filters-btn">Применить</button>
                 </div>
-            </div>
-            <script src="js/filter.js"></script> 
+            </div> 
             <div class="store-wrapper">
                 <div class="store">
-                    <a href="" class="store-card" data-category="ifa" data-manufacturer="condalab" data-direction="med">
-                        <h1>Агар маннит — солевой (Mannitol Salt Agar (MSA) (Chapman Medium USP) (Eur. Pharm.))</h1>
-                        <img src="img/test.jpg" alt="store">
-                        <p>Артикул: 1062.05</p>
-                        <p>Производитель: Condalab (Испания)</p>
-                    </a>
-                    <a href="" class="store-card" data-category="pcr" data-manufacturer="P-I-T" data-direction="med">
-                        <h1>Агар маннит — солевой (Mannitol Salt Agar (MSA) (Chapman Medium USP) (Eur. Pharm.))</h1>
-                        <img src="img/uslugi-1.png" alt="store">
-                        <p>Артикул: 1062.05</p>
-                        <p>Производитель: Condalab (Испания)</p>
-                    </a>
-                    <a href="" class="store-card" data-category="ifa" data-manufacturer="condalab" data-direction="med">
-                        <h1>Агар маннит — солевой (Mannitol Salt Agar (MSA) (Chapman Medium USP) (Eur. Pharm.))</h1>
-                        <img src="img/test.jpg" alt="store">
-                        <p>Артикул: 1062.05</p>
-                        <p>Производитель: Condalab (Испания)</p>
+                    
+                <?php
+                    
+                    $sql = "SELECT * FROM baza where type = '$type'";
+                    $result = $conn->query($sql);
+                        
+                        if ($result->num_rows > 0) {
+                            while($row = $result->fetch_assoc()) {
+                                echo '<a href="?page=product&id=' . $row['id'] . '" class="store-card" data-manufacturer="condalab" data-direction="med">';
+                                echo '<h1>' . htmlspecialchars($row['name']) . '</h1>';
+                                echo '<img src="img/' . htmlspecialchars($row['photo']) . '" alt="' . htmlspecialchars($row['name']) . '">';
+                                echo '<p>Артикул:' . htmlspecialchars($row['art']) . '</p>';
+                                echo '<p>Производитель:' . htmlspecialchars($row['fabric']) . '</p>';
+                            }
+                        } else {
+                            echo "No items found";
+                        }
+
+                        ?>
                     </a>
                 </div>
             </div>
         </div>
     </div>
+    <?php
+                } else {
+                    echo '<p>Item not found</p>';
+                }
+            }
+        } else {
+            echo '<p>No category specified</p>';
+        }
+        ?>
     <script src="js/search.js"></script>
+    <script src="js/filter.js"></script>
 </body>
 </html>

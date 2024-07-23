@@ -67,25 +67,25 @@
             <div class="cards">
                 <h1>Диагностика</h1>
                 <div class="cards-wrapper">
-                    <a href="?page=store">
+                    <a href="?page=store&type=ПЦР">
                         <img src="img/uslugi-1.png" alt="">
                         <h2>ПЦР тест системы</h2>
                     </a>
-                    <a href="?page=store">
+                    <a href="?page=store&type=ИФА">
                         <img src="img/uslugi-2.webp" alt="">
                         <h2>ИФА тест системы</h2>
                     </a>
-                    <a href="?page=store">
+                    <a href="?page=store&type=Пит. среды">
                         <img src="img/uslugi-3.jpg" alt="">
                         <h2>Питательные среды</h2>
                     </a>
                 </div>
                 <div class="cards-wrapper-2">
-                    <a href="?page=store">
+                    <a href="?page=store&type=Оборудование">
                         <img src="img/uslugi-4.jpg" alt="">
                         <h2>Оборудование</h2>
                     </a>
-                    <a href="?page=store">
+                    <a href="?page=store&type=Экспресс тесты">
                         <img src="img/uslugi-5.png" alt="">
                         <h2>Экспресс-тесты</h2>
                     </a>

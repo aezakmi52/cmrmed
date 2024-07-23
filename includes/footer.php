@@ -7,11 +7,11 @@
                 </div>
                 <div class="footer-item">
                     <h1>Навигация</h1>
-                    <a href="">ПЦР</a>
-                    <a href="">ИФА</a>
-                    <a href="">Экспресс тесты</a>
-                    <a href="">Оборудование</a>
-                    <a href="">Питательные среды</a>
+                    <a href="?page=store&type=ПЦР">ПЦР</a>
+                    <a href="?page=store&type=ИФА">ИФА</a>
+                    <a href="?page=store&type=Экспресс тесты">Экспресс тесты</a>
+                    <a href="?page=store&type=Оборудование">Оборудование</a>
+                    <a href="?page=store&type=Пит. среды">Питательные среды</a>
                 </div>
                 <div class="footer-item">
                     <h1>Полезная информация</h1>

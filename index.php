@@ -19,4 +19,6 @@ include 'includes/header.php';
 include $content;
 include 'includes/footer.php';
 
+$conn->close();
+
 ?>

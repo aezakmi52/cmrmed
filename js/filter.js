@@ -17,11 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const applyFiltersBtn = document.getElementById('apply-filters-btn');
     applyFiltersBtn.addEventListener('click', () => {
-        const category = document.getElementById('category').value;
         const manufacturer = document.getElementById('manufacturer').value;
         const direction = document.getElementById('direction').value;
 
-        applyFilters({ category, manufacturer, direction });
+        applyFilters({ manufacturer, direction });
 
         filterDropdown.classList.remove('show');
     });
@@ -30,15 +29,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const items = document.querySelectorAll('.store-card');
 
         items.forEach(item => {
-            const itemCategory = item.getAttribute('data-category');
             const itemManufacturer = item.getAttribute('data-manufacturer');
             const itemDirection = item.getAttribute('data-direction');
 
             let isVisible = true;
-
-            if (filters.category !== 'all' && filters.category !== itemCategory) {
-                isVisible = false;
-            }
 
             if (filters.manufacturer !== 'all' && filters.manufacturer !== itemManufacturer) {
                 isVisible = false;
