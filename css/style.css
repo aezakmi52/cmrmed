@@ -799,7 +799,7 @@ footer {
 
     .store-card {
         width: 100%;
-
+        min-height: 550px;
     }
 
     .filter-container {
@@ -811,17 +811,19 @@ footer {
     
     .filter-btn {
         width: 50%;
-        display: inline-block;  
+        display: inline-block; 
     }
     
     .filter-dropdown {
         display: none;
         position: absolute;
+        top: 50px;
         background-color: white;
         box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
         padding: 15px;
         z-index: 1;
         min-width: 200px;
+        max-width: none;
         width: 100%;
         border-radius: 30px;
     }

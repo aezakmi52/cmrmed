@@ -1,7 +1,7 @@
 <body>
     <div class="search-container">
         <input type="text" id="search-input" placeholder="Поиск">
-        <button class="search-btn" id="search-btn">Найти</button>
+        <button class="clearButton" id="clearButton">Очистить</button>
     </div>
 
     <?php

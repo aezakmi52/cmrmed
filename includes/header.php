@@ -14,10 +14,12 @@
         <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
         <label for="burger-checkbox" class="burger"></label>
         <ul class="menu-list">
-            <li><a href="?page=store&type=" class="menu-item">Главная</a><li>
-            <li><a href="?page=store&type" class="menu-item">О нас</a><li>
-            <li><a href="?page=store&type" class="menu-item">Команда</a><li>
-            <li><a href="?page=store&type" class="menu-item">Контакты</a><li>
+            <li><a href="?page=home" class="menu-item">Главная</a><li>
+            <li><a href="?page=store&type=ИФА" class="menu-item">ИФА</a><li>
+            <li><a href="?page=store&type=ПЦР" class="menu-item">ПЦР</a><li>
+            <li><a href="?page=store&type=Экспресс тесты" class="menu-item">Экспресс тесты</a><li>
+            <li><a href="?page=store&type=Пит. среды" class="menu-item">Питательные среды</a><li>
+            <li><a href="?page=store&type=Оборудование" class="menu-item">Оборудование</a><li>
         </ul>
     </div>
     <div class="container">

@@ -3,6 +3,7 @@ const searchInput = document.getElementById('search-input');
         const query = searchInput.value.toLowerCase();
         searchItems(query);
     })
+const clearButton = document.getElementById('clearButton');
 
 function searchItems(query) {
     const items = document.querySelectorAll('.store-card');
@@ -16,5 +17,12 @@ function searchItems(query) {
         } else {
             item.style.display = 'none';
         }
+    });
+
+    clearButton.addEventListener('click', function() {
+        searchInput.value = '';
+        items.forEach(item => {
+            item.style.display = ''; 
+        });
     });
 }
