@@ -1,13 +1,8 @@
 <body>
-    <div class="search-container">
-        <input type="text" id="search-input" placeholder="Поиск">
-        <button class="clearButton" id="clearButton">Очистить</button>
-    </div>
-
     <?php
             if (isset($_GET['type'])) {
             $type = $_GET['type'];
-            $sql = "SELECT * FROM baza WHERE type='$type'";
+            $sql = "SELECT * FROM product WHERE type='$type'";
             $result = $conn->query($sql);
 
             if ($result === false) {
@@ -17,6 +12,12 @@
                     $item = $result->fetch_assoc();
     ?>
     <div class="title"><?php echo htmlspecialchars($item['type']);?></div>
+    <div class ="container">  
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Поиск">
+            <button class="clearButton" id="clearButton">Очистить</button>
+        </div>
+    </div>
     <div class="store-page">
         <div class="wrapper">  
             <div class="filter-container">
@@ -25,28 +26,58 @@
                     <div class="filter-section">
                         <label for="manufacturer">Производитель</label>
                         <select id="manufacturer">
-                            <option value="all">Все</option>
-                            <option value="condalab">Condalab(Испания)</option>
-                            <option value="membrane-solutions">Membrane Solutions (КНР)</option>
-                            <option value="erba-mannheim">Erba Mannheim (Чехия)</option>
-                            <option value="liofilchem">Liofilchem (Италия)</option>
-                            <option value="bioanalyse">Bioanalyse (Турция)</option>
-                            <option value="microbiologics">Microbiologics (США)</option>
-                            <option value="biolife">Biolife (Италия)</option>
-                            <option value="P-I-T">P.I.T. (Россия)</option>
-                            <option value="bioMedia">BioMedia (Россия)</option>
-                            <option value="VEDALAB">VEDALAB (Франция)</option>
+                        <?php
+                        
+                        $sql = "SELECT * FROM fabric";
+                        $result = $conn->query($sql);
+                    
+                        if ($result->num_rows > 0) {
+                            while($row = $result->fetch_assoc()) {
+                                echo '<option value="' . htmlspecialchars($row['fabric_filter']) . '">' . htmlspecialchars($row['fabric_name']) . '</option>';
+                            }
+                        } else {
+                            echo "No items found";
+                        }
+
+                    ?>
                         </select>
                     </div>
                     <div class="filter-section">
                         <label for="direction">Направление</label>
                         <select id="direction">
-                            <option value="all">Все</option>
-                            <option value="med">Медицина</option>
-                            <option value="san">Санитарные исследования</option>
-                            <option value="prom">Промышленность</option>
-                            <option value="vet">Ветеринария</option>
-                            <option value="science">Наука</option>
+                        <?php
+                        
+                        $sql = "SELECT * FROM direct";
+                        $result = $conn->query($sql);
+                    
+                        if ($result->num_rows > 0) {
+                            while($row = $result->fetch_assoc()) {
+                                echo '<option value="' . htmlspecialchars($row['direct_filter']) . '">' . htmlspecialchars($row['direct_name']) . '</option>';
+                            }
+                        } else {
+                            echo "No items found";
+                        }
+
+                    ?>
+                        </select>
+                    </div>
+                    <div class="filter-section">
+                        <label for="category">Категория</label>
+                        <select id="category">
+                            <?php
+                        
+                                $sql = "SELECT * FROM category";
+                                $result = $conn->query($sql);
+                            
+                                if ($result->num_rows > 0) {
+                                    while($row = $result->fetch_assoc()) {
+                                        echo '<option value="' . htmlspecialchars($row['category_filter']) . '">' . htmlspecialchars($row['category_name']) . '</option>';
+                                    }
+                                } else {
+                                    echo "No items found";
+                                }
+
+                            ?>
                         </select>
                     </div>
                     <button class="apply-filters-btn" id="apply-filters-btn">Применить</button>
@@ -57,16 +88,21 @@
                     
                 <?php
                     
-                    $sql = "SELECT * FROM baza where type = '$type'";
+                    $sql = "SELECT id, name, photo, art, fabric_name, fabric_filter, GROUP_CONCAT(direct_name) as directs FROM  product  INNER JOIN category on product.category_id = category.category_id 
+                                                                                                                            INNER JOIN fabric on product.fabric_id = fabric.fabric_id 
+                                                                                                                            INNER JOIN direct_has_product on product.id = direct_has_product.product_id
+                                                                                                                            INNER JOIN direct on direct_has_product.direct_id = direct.direct_id
+                                                                                                                            WHERE type = '$type'
+                                                                                                                            group by id";
                     $result = $conn->query($sql);
                         
                         if ($result->num_rows > 0) {
                             while($row = $result->fetch_assoc()) {
-                                echo '<a href="?page=product&id=' . $row['id'] . '" class="store-card" data-manufacturer="condalab" data-direction="med">';
+                                echo '<a href="?page=product&id=' . $row['id'] . '" class="store-card" data-manufacturer="' . htmlspecialchars($row['fabric_filter']) . '" data-direction="med" data-category="med">';
                                 echo '<h1>' . htmlspecialchars($row['name']) . '</h1>';
-                                echo '<img src="img/' . htmlspecialchars($row['photo']) . '" alt="' . htmlspecialchars($row['name']) . '">';
+                                echo '<img src="img-product/' . htmlspecialchars($row['photo']) . '" alt="' . htmlspecialchars($row['name']) . '">';
                                 echo '<p>Артикул:' . htmlspecialchars($row['art']) . '</p>';
-                                echo '<p>Производитель:' . htmlspecialchars($row['fabric']) . '</p>';
+                                echo '<p>Производитель:' . htmlspecialchars($row['fabric_name']) . '</p>';
                             }
                         } else {
                             echo "No items found";

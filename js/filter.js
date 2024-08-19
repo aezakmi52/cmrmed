@@ -19,8 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
     applyFiltersBtn.addEventListener('click', () => {
         const manufacturer = document.getElementById('manufacturer').value;
         const direction = document.getElementById('direction').value;
+        const category = document.getElementById('category').value;
 
-        applyFilters({ manufacturer, direction });
+        applyFilters({ manufacturer, direction, category });
 
         filterDropdown.classList.remove('show');
     });
@@ -31,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         items.forEach(item => {
             const itemManufacturer = item.getAttribute('data-manufacturer');
             const itemDirection = item.getAttribute('data-direction');
+            const itemCategory = item.getAttribute('data-category');
 
             let isVisible = true;
 
@@ -39,6 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             if (filters.direction !== 'all' && filters.direction !== itemDirection) {
+                isVisible = false;
+            }
+
+            if (filters.category !== 'all' && filters.category !== itemCategory) {
                 isVisible = false;
             }
             

@@ -1,4 +1,10 @@
 <body>
+<?php
+    if (isset($_SESSION['message'])) {
+        echo "<p>" . $_SESSION['message'] . "</p>";
+        unset($_SESSION['message']);
+    }
+    ?>
     <div class="carousel">
         <div class="carousel-images">
             <div class="carousel-item item-1">
@@ -97,12 +103,12 @@
             <div class="feedback">
                 <h1>Обратная связь</h1>
                 <p>Наш сотрудник ответит вам в ближайшее время</p>
-                <form action="#" method="post">
+                <form action="feedback.php" method="POST" id="feedback">
                     <div>
-                        <input type="text" placeholder="Имя">
-                        <input type="tel" placeholder="Телефон" pattern="\+?[0-9\s\-\(\)]{7,15}" required>
+                        <input type="text" placeholder="Имя" id="name" name="name" require>
+                        <input type="tel" placeholder="Телефон" id="phone" name="phone" require>
                     </div>
-                    <button type="submit">Заказать звонок</button>
+                    <button type="submit">Отправить</button>
                 </form>
             </div>
         </div>

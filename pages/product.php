@@ -5,7 +5,11 @@
         <?php
             if (isset($_GET['id'])) {
             $id = intval($_GET['id']);
-            $sql = "SELECT * FROM baza WHERE id=$id";
+            $sql = "SELECT * FROM product  INNER JOIN category on product.category_id = category.category_id 
+                                           INNER JOIN fabric on product.fabric_id = fabric.fabric_id 
+                                           INNER JOIN direct_has_product on product.id = direct_has_product.product_id
+                                           INNER JOIN direct on direct_has_product.direct_id = direct.direct_id
+                                           WHERE id=$id";
             $result = $conn->query($sql);
             
             if ($result === false) {
@@ -15,23 +19,33 @@
                     $item = $result->fetch_assoc();
                     ?>
                     <div class="product-wrapper">
-                        <img src="img/<?php echo htmlspecialchars($item['photo']);?>" alt="<?php echo htmlspecialchars($item['name']);?>">
+                        <img src="img-product/<?php echo htmlspecialchars($item['photo']);?>" alt="<?php echo htmlspecialchars($item['name']);?>">
                         <div class="product-desc">
                             <h1><?php echo htmlspecialchars($item['name']);?></h1>
                             <p>Артикул: <?php echo htmlspecialchars($item['art']);?></p>
-                            <p>Категория: <?php echo htmlspecialchars($item['kat']);?></p>
+                            <p>Категория: <?php echo htmlspecialchars($item['category_name']);?></p>
                             <ul>
                                 <li><b>Фасовка:</b> <?php echo htmlspecialchars($item['fas']);?></li>
                                 <li><b>Микроорганизмы:</b> <?php echo htmlspecialchars($item['micro']);?></li>
-                                <li><b>Направлениe:</b> <?php echo htmlspecialchars($item['direct']);?></li>
-                                <li><b>Производитель:</b> <?php echo htmlspecialchars($item['fabric']);?></li>
-                                <li><b>Регистрационное удостоверение:</b> <?php echo htmlspecialchars($item['cert']);?></li>
+                                <li><b>Направлениe:</b> <?php 
+                                                                $sql1 = "SELECT GROUP_CONCAT(direct_name) as directs FROM  product  INNER JOIN category on product.category_id = category.category_id 
+                                                                                                                        INNER JOIN fabric on product.fabric_id = fabric.fabric_id 
+                                                                                                                        INNER JOIN direct_has_product on product.id = direct_has_product.product_id
+                                                                                                                        INNER JOIN direct on direct_has_product.direct_id = direct.direct_id
+                                                                                                                        WHERE id=$id";
+                                                                $result1 = $conn->query($sql1);
+                                                                $item1 = $result1->fetch_assoc();
+                                                                echo htmlspecialchars($item1['directs']);?>
+                                </li>
+                                <li><b>Производитель:</b> <?php echo htmlspecialchars($item['fabric_name']);?></li>
+                                <li><b>Регистрационное удостоверение:</b> <?php echo htmlspecialchars($item['docs']);?></li>
                             </ul>
+                            <button onclick="addToCart('<?php echo htmlspecialchars($item['name']); ?>', 1)">Добавить в корзину</button>
                         </div>
                     </div>
                     <div class="description">
                         <h1>Описание</h1>
-                        <p><?php echo htmlspecialchars($item['descript']);?></p>
+                        <p><?php echo htmlspecialchars($item['desc']);?></p>
                     </div>
                     <?php
                 } else {
