@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         items.forEach(item => {
             const itemManufacturer = item.getAttribute('data-manufacturer');
-            const itemDirection = item.getAttribute('data-direction');
+            const itemDirection = item.getAttribute('data-direction').split(','); 
             const itemCategory = item.getAttribute('data-category');
 
             let isVisible = true;
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 isVisible = false;
             }
 
-            if (filters.direction !== 'all' && filters.direction !== itemDirection) {
+            if (filters.direction !== 'all' && !itemDirection.includes(filters.direction)) {
                 isVisible = false;
             }
 
@@ -48,11 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 isVisible = false;
             }
             
-            if (isVisible) {
-                item.style.display = 'block';
-            } else {
-                item.style.display = 'none';
-            }
+            item.style.display = isVisible ? 'block' : 'none';
         });
     }
 });

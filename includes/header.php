@@ -50,12 +50,8 @@
                 <nav>
                     <ul>
                         <a href="?page=home">Главная</a>    
-                        <a href="?page=store&type=ИФА">ИФА</a>
-                        <a href="?page=store&type=ПЦР">ПЦР</a>
-                        <a href="?page=store&type=Экспресс тесты">Экспресс тесты</a>
-                        <a href="?page=store&type=Пит. среды">Питательные среды</a>
-                        <a href="?page=store&type=Оборудование">Оборудование</a>
-                        <a href="?page=store&type">Контакты</a>
+                        <a href="?page=store">Каталог</a> 
+                        <a href="?page=store">Контакты</a>
                     </ul>
                 </nav>
             </div>

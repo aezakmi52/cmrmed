@@ -11,6 +11,9 @@ switch ($page) {
     case 'product':
         $content = 'pages/product.php';
         break;
+    case 'store':
+        $content = 'pages/store.php';
+        break;
     default:
         $content = 'pages/home.php';
 }

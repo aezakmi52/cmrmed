@@ -1,8 +1,6 @@
 <body>
     <?php
-            if (isset($_GET['type'])) {
-            $type = $_GET['type'];
-            $sql = "SELECT * FROM product WHERE type='$type'";
+            $sql = "SELECT * FROM product";
             $result = $conn->query($sql);
 
             if ($result === false) {
@@ -11,7 +9,7 @@
                 if ($result->num_rows > 0) {
                     $item = $result->fetch_assoc();
     ?>
-    <div class="title"><?php echo htmlspecialchars($item['type']);?></div>
+    <div class="title">Каталог</div>
     <div class ="container">  
         <div class="search-container">
             <input type="text" id="search-input" placeholder="Поиск">
@@ -88,17 +86,16 @@
                     
                 <?php
                     
-                    $sql = "SELECT id, name, photo, art, fabric_name, fabric_filter, GROUP_CONCAT(direct_name) as directs FROM  product  INNER JOIN category on product.category_id = category.category_id 
+                    $sql = "SELECT id, name, photo, art, fabric_name, fabric_filter, category_filter, GROUP_CONCAT(direct_name) as directs, GROUP_CONCAT(direct_filter) as directs_filters FROM  product  INNER JOIN category on product.category_id = category.category_id 
                                                                                                                             INNER JOIN fabric on product.fabric_id = fabric.fabric_id 
                                                                                                                             INNER JOIN direct_has_product on product.id = direct_has_product.product_id
                                                                                                                             INNER JOIN direct on direct_has_product.direct_id = direct.direct_id
-                                                                                                                            WHERE type = '$type'
                                                                                                                             group by id";
                     $result = $conn->query($sql);
                         
                         if ($result->num_rows > 0) {
                             while($row = $result->fetch_assoc()) {
-                                echo '<a href="?page=product&id=' . $row['id'] . '" class="store-card" data-manufacturer="' . htmlspecialchars($row['fabric_filter']) . '" data-direction="med" data-category="med">';
+                                echo '<a href="?page=product&id=' . $row['id'] . '" class="store-card" data-manufacturer="' . htmlspecialchars($row['fabric_filter']) . '" data-direction="' . htmlspecialchars($row['directs_filters']) . '" data-category="' . htmlspecialchars($row['category_filter']) . '">';
                                 echo '<h1>' . htmlspecialchars($row['name']) . '</h1>';
                                 echo '<img src="img-product/' . htmlspecialchars($row['photo']) . '" alt="' . htmlspecialchars($row['name']) . '">';
                                 echo '<p>Артикул:' . htmlspecialchars($row['art']) . '</p>';
@@ -119,9 +116,6 @@
                     echo '<p>Item not found</p>';
                 }
             }
-        } else {
-            echo '<p>No category specified</p>';
-        }
         ?>
     <script src="js/search.js"></script>
     <script src="js/filter.js"></script>
