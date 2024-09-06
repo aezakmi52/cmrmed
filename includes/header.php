@@ -16,11 +16,9 @@
         <label for="burger-checkbox" class="burger"></label>
         <ul class="menu-list">
             <li><a href="?page=home" class="menu-item">Главная</a><li>
-            <li><a href="?page=store&type=ИФА" class="menu-item">ИФА</a><li>
-            <li><a href="?page=store&type=ПЦР" class="menu-item">ПЦР</a><li>
-            <li><a href="?page=store&type=Экспресс тесты" class="menu-item">Экспресс тесты</a><li>
-            <li><a href="?page=store&type=Пит. среды" class="menu-item">Питательные среды</a><li>
-            <li><a href="?page=store&type=Оборудование" class="menu-item">Оборудование</a><li>
+            <li><a href="?page=store" class="menu-item">Каталог</a><li>
+            <li><a href="?page=micro" class="menu-item">Микроорганизмы</a><li>
+            <li><a href="?page=contact" class="menu-item">Контакты</a><li>
         </ul>
     </div>
     <button class="cart-button" id="cart-button">Корзина</button>
@@ -50,8 +48,9 @@
                 <nav>
                     <ul>
                         <a href="?page=home">Главная</a>    
-                        <a href="?page=store">Каталог</a> 
-                        <a href="?page=store">Контакты</a>
+                        <a href="?page=store">Каталог</a>
+                        <a href="?page=micro">Микроорганизмы</a> 
+                        <a href="?page=contact">Контакты</a>
                     </ul>
                 </nav>
             </div>

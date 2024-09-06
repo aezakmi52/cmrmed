@@ -598,9 +598,16 @@ footer {
     gap: 50px;
 }
 
+.not-found {
+    text-align: center;
+    height: 60vh;
+    font-size: 30px;
+    padding-top: 10%;
+}
+
 .store-card {
     width: calc(28%);
-    min-width: 310px;
+    min-width: 330px;
     background-color: #fff;
     padding: 20px;
     border-radius: 30px;
@@ -669,12 +676,80 @@ footer {
     padding: 40px;
 }
 
-.description h1 {
-    width: 100%;
-    text-align: center;
-    font-size: 30px;
+.counter {
     margin-bottom: 20px;
 }
+
+.counter input {
+    border: 1px solid rgb(93, 141, 93);
+    padding: 5px;
+}
+
+.tab-buttons {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    border-radius: 0;
+    padding: 10px 10px;
+    color: rgb(93, 141, 93);
+    background-color: transparent;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tab-btn.active {
+    border-bottom: 3px solid rgb(93, 141, 93);
+}
+
+.tab-content {
+    padding: 20px;
+}
+
+.tab-content a {
+    color: rgb(93, 141, 93);
+    text-decoration: underline;
+}
+
+.tab-item {
+    display: none;
+}
+
+.tab-item.active {
+    display: block;
+}
+
+/* page micro*/
+
+.accordion {
+    margin: 20px 0;
+    border: 1px solid rgb(93, 141, 93);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.accordion-header {
+    background-color: rgb(93, 141, 93);
+    padding: 15px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+.accordion-content.open {
+    max-height: 700px; 
+    padding: 15px;
+}
+
 
 @media only screen and (max-width: 430px) {
     /* index */

@@ -38,6 +38,7 @@ let cart = JSON.parse(localStorage.getItem('cart')) || {};
 
 
 function addToCart(productName, quantity) {
+    quantity = parseInt(quantity, 10);
     if (cart[productName]) {
         cart[productName] += quantity;
     } else {

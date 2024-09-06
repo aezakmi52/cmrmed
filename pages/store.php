@@ -102,7 +102,7 @@
                                 echo '<p>Производитель:' . htmlspecialchars($row['fabric_name']) . '</p>';
                             }
                         } else {
-                            echo "No items found";
+                            echo '<p class="not-found">Не найдено товаров, удовлетворяющих критериям</p>';
                         }
 
                         ?>
@@ -113,7 +113,7 @@
     </div>
     <?php
                 } else {
-                    echo '<p>Item not found</p>';
+                    echo '<p class="not-found">Не найдено товаров, удовлетворяющих критериям</p>';
                 }
             }
         ?>
