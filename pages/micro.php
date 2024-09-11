@@ -1,7 +1,8 @@
 <body>
     <div class="container">
         <?php
-        $microSql = "SELECT micro FROM product";
+        $microSql = "SELECT count(micro) as count, micro FROM product
+                     group by micro";
         $microResult = $conn->query($microSql);
 
         if ($microResult === false) {
@@ -10,17 +11,14 @@
             if ($microResult->num_rows > 0) {
                 while ($micro = $microResult->fetch_assoc()) {
                     echo '<div class="accordion">';
-                    echo '<div class="accordion-header">' . htmlspecialchars($micro['micro']) . '</div>';
+                    echo '<div class="accordion-header">' . htmlspecialchars($micro['micro']) . ' (' . htmlspecialchars($micro['count']) . ')</div>';
                     echo '<div class="accordion-content">';
                     
                     $microEscaped = $conn->real_escape_string($micro['micro']);
 
-                    $productsSql = "SELECT id, name, photo, art, fabric_name, fabric_filter, category_filter, GROUP_CONCAT(direct_name) as directs, GROUP_CONCAT(direct_filter) as directs_filters 
-                                    FROM product 
+                    $productsSql = "SELECT id, name, photo, art, fabric_name, fabric_filter, category_filter, micro FROM product 
                                     INNER JOIN category ON product.category_id = category.category_id 
                                     INNER JOIN fabric ON product.fabric_id = fabric.fabric_id 
-                                    INNER JOIN direct_has_product ON product.id = direct_has_product.product_id
-                                    INNER JOIN direct ON direct_has_product.direct_id = direct.direct_id
                                     where product.micro = '$microEscaped'
                                     GROUP BY id";
                     $productsResult = $conn->query($productsSql);
@@ -28,7 +26,7 @@
                     if ($productsResult->num_rows > 0) {
                         echo '<div class="store">';
                         while ($row = $productsResult->fetch_assoc()) {
-                            echo '<a href="?page=product&id=' . $row['id'] . '" class="store-card" data-manufacturer="' . htmlspecialchars($row['fabric_filter']) . '" data-direction="' . htmlspecialchars($row['directs_filters']) . '" data-category="' . htmlspecialchars($row['category_filter']) . '">';
+                            echo '<a href="?page=product&id=' . $row['id'] . '" class="store-card" data-manufacturer="' . htmlspecialchars($row['fabric_filter']) . '" data-micro="' . htmlspecialchars($row['micro']) . '" data-category="' . htmlspecialchars($row['category_filter']) . '">';
                             echo '<h1>' . htmlspecialchars($row['name']) . '</h1>';
                             echo '<img src="img-product/' . htmlspecialchars($row['photo']) . '" alt="' . htmlspecialchars($row['name']) . '">';
                             echo '<p>Артикул: ' . htmlspecialchars($row['art']) . '</p>';

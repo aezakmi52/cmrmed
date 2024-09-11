@@ -41,16 +41,17 @@
                         </select>
                     </div>
                     <div class="filter-section">
-                        <label for="direction">Направление</label>
-                        <select id="direction">
+                        <label for="micro">Идентификация</label>
+                        <select id="micro">
+                            <option value="all">Все</option>
                         <?php
                         
-                        $sql = "SELECT * FROM direct";
+                        $sql = "SELECT distinct micro FROM product";
                         $result = $conn->query($sql);
                     
                         if ($result->num_rows > 0) {
                             while($row = $result->fetch_assoc()) {
-                                echo '<option value="' . htmlspecialchars($row['direct_filter']) . '">' . htmlspecialchars($row['direct_name']) . '</option>';
+                                echo '<option value="' . htmlspecialchars($row['micro']) . '">' . htmlspecialchars($row['micro']) . '</option>';
                             }
                         } else {
                             echo "No items found";
@@ -79,6 +80,7 @@
                         </select>
                     </div>
                     <button class="apply-filters-btn" id="apply-filters-btn">Применить</button>
+                    <button class="reset-filters-btn" id="reset-filters-btn">Сбросить</button>
                 </div>
             </div> 
             <div class="store-wrapper">
@@ -86,20 +88,18 @@
                     
                 <?php
                     
-                    $sql = "SELECT id, name, photo, art, fabric_name, fabric_filter, category_filter, GROUP_CONCAT(direct_name) as directs, GROUP_CONCAT(direct_filter) as directs_filters FROM  product  INNER JOIN category on product.category_id = category.category_id 
+                    $sql = "SELECT id, name, photo, art, fabric_name, fabric_filter, category_filter, micro FROM  product  INNER JOIN category on product.category_id = category.category_id 
                                                                                                                             INNER JOIN fabric on product.fabric_id = fabric.fabric_id 
-                                                                                                                            INNER JOIN direct_has_product on product.id = direct_has_product.product_id
-                                                                                                                            INNER JOIN direct on direct_has_product.direct_id = direct.direct_id
                                                                                                                             group by id";
                     $result = $conn->query($sql);
                         
                         if ($result->num_rows > 0) {
                             while($row = $result->fetch_assoc()) {
-                                echo '<a href="?page=product&id=' . $row['id'] . '" class="store-card" data-manufacturer="' . htmlspecialchars($row['fabric_filter']) . '" data-direction="' . htmlspecialchars($row['directs_filters']) . '" data-category="' . htmlspecialchars($row['category_filter']) . '">';
+                                echo '<a href="?page=product&id=' . $row['id'] . '" class="store-card" data-manufacturer="' . htmlspecialchars($row['fabric_filter']) . '" data-micro="' . htmlspecialchars($row['micro']) . '" data-category="' . htmlspecialchars($row['category_filter']) . '">';
                                 echo '<h1>' . htmlspecialchars($row['name']) . '</h1>';
                                 echo '<img src="img-product/' . htmlspecialchars($row['photo']) . '" alt="' . htmlspecialchars($row['name']) . '">';
-                                echo '<p>Артикул:' . htmlspecialchars($row['art']) . '</p>';
-                                echo '<p>Производитель:' . htmlspecialchars($row['fabric_name']) . '</p>';
+                                echo '<p>Артикул: ' . htmlspecialchars($row['art']) . '</p>';
+                                echo '<p>Производитель: ' . htmlspecialchars($row['fabric_name']) . '</p>';
                             }
                         } else {
                             echo '<p class="not-found">Не найдено товаров, удовлетворяющих критериям</p>';

@@ -639,6 +639,16 @@ footer {
 
 /* страница товара*/
 
+.back-button-product {
+    position: sticky;
+    top: 30px;
+    left: 30px;
+    background-color: rgb(203, 233, 203);
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid rgb(93, 141, 93);
+}
+
 .product {
     margin-top: 5%;
     background-color: #fff;
@@ -655,6 +665,7 @@ footer {
 .product-wrapper img {
     object-fit: contain;
     width: 40%;
+    min-width: 40%;
 }
 
 .product-desc h1 {
@@ -688,30 +699,35 @@ footer {
 .tab-buttons {
     display: flex;
     gap: 30px;
-    margin-bottom: 20px;
 }
 
 .tab-btn {
-    border-radius: 0;
     padding: 10px 10px;
     color: rgb(93, 141, 93);
     background-color: transparent;
     font-size: 20px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, margin-top 0.3s;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    z-index: 1;
+    margin-top: 10px;
 }
 
 .tab-btn.active {
-    border-bottom: 3px solid rgb(93, 141, 93);
+    background-color: rgb(203, 233, 203);
+    margin-top: 0;
+    z-index: 2;
 }
 
 .tab-content {
-    padding: 20px;
-}
-
-.tab-content a {
-    color: rgb(93, 141, 93);
-    text-decoration: underline;
+    padding: 15px;
+    margin-top: -2px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: rgb(203, 233, 203);
 }
 
 .tab-item {
@@ -743,6 +759,7 @@ footer {
     overflow: hidden;
     padding: 0 15px;
     transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    overflow-y: scroll;
 }
 
 .accordion-content.open {

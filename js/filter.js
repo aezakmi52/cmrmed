@@ -16,12 +16,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const applyFiltersBtn = document.getElementById('apply-filters-btn');
+    const resetFiltersButton = document.getElementById('reset-filters-btn');
+
+    const manufacturerSelect = document.getElementById('manufacturer');
+    const microSelect = document.getElementById('micro');
+    const categorySelect = document.getElementById('category');
+    const productCards = document.querySelectorAll('.store-card');
+
     applyFiltersBtn.addEventListener('click', () => {
         const manufacturer = document.getElementById('manufacturer').value;
-        const direction = document.getElementById('direction').value;
+        const micro = document.getElementById('micro').value;
         const category = document.getElementById('category').value;
 
-        applyFilters({ manufacturer, direction, category });
+        applyFilters({ manufacturer, micro, category });
 
         filterDropdown.classList.remove('show');
     });
@@ -31,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         items.forEach(item => {
             const itemManufacturer = item.getAttribute('data-manufacturer');
-            const itemDirection = item.getAttribute('data-direction').split(','); 
+            const itemMicro = item.getAttribute('data-micro'); 
             const itemCategory = item.getAttribute('data-category');
 
             let isVisible = true;
@@ -40,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 isVisible = false;
             }
 
-            if (filters.direction !== 'all' && !itemDirection.includes(filters.direction)) {
+            if (filters.micro !== 'all' && filters.micro !== itemMicro) {
                 isVisible = false;
             }
 
@@ -51,4 +58,15 @@ document.addEventListener('DOMContentLoaded', () => {
             item.style.display = isVisible ? 'block' : 'none';
         });
     }
+
+    resetFiltersButton.addEventListener('click', function() {
+        
+        manufacturerSelect.value = 'all';
+        microSelect.value = 'all';
+        categorySelect.value = 'all';
+
+        productCards.forEach(function (item) {
+            item.style.display = 'block';
+        });
+    });
 });

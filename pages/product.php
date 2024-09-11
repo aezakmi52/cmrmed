@@ -1,4 +1,5 @@
 <body>
+    <a href="?page=store" class="back-button-product">Назад</a>
     <div class="container">
         <div class="product">
             
@@ -7,8 +8,6 @@
             $id = intval($_GET['id']);
             $sql = "SELECT * FROM product  INNER JOIN category on product.category_id = category.category_id 
                                            INNER JOIN fabric on product.fabric_id = fabric.fabric_id 
-                                           INNER JOIN direct_has_product on product.id = direct_has_product.product_id
-                                           INNER JOIN direct on direct_has_product.direct_id = direct.direct_id
                                            WHERE id=$id";
             $result = $conn->query($sql);
             
@@ -27,16 +26,6 @@
                             <ul>
                                 <li><b>Фасовка:</b> <?php echo htmlspecialchars($item['fas']);?></li>
                                 <li><b>Микроорганизмы:</b> <?php echo htmlspecialchars($item['micro']);?></li>
-                                <li><b>Направлениe:</b> <?php 
-                                                                $sql1 = "SELECT GROUP_CONCAT(direct_name) as directs FROM  product  INNER JOIN category on product.category_id = category.category_id 
-                                                                                                                        INNER JOIN fabric on product.fabric_id = fabric.fabric_id 
-                                                                                                                        INNER JOIN direct_has_product on product.id = direct_has_product.product_id
-                                                                                                                        INNER JOIN direct on direct_has_product.direct_id = direct.direct_id
-                                                                                                                        WHERE id=$id";
-                                                                $result1 = $conn->query($sql1);
-                                                                $item1 = $result1->fetch_assoc();
-                                                                echo htmlspecialchars($item1['directs']);?>
-                                </li>
                                 <li><b>Производитель:</b> <?php echo htmlspecialchars($item['fabric_name']);?></li>
                                 <li><b>Страна:</b> <?php echo htmlspecialchars($item['country']);?></li>
                                 <li><b>Регистрационное удостоверение:</b> <?php echo htmlspecialchars($item['docs']);?></li>
@@ -60,10 +49,10 @@
                                  <p><?php echo htmlspecialchars($item['desc']);?></p>
                             </div>
                             <div id="technical" class="tab-item">
-                                <p><?php echo htmlspecialchars($item['function']);?></p>
+                                <p><?php echo nl2br(htmlspecialchars($item['technical']));?></p>
                             </div>
                             <div id="functional" class="tab-item">
-                                <p><?php echo nl2br(htmlspecialchars($item['technical']));?></p>
+                                <p><?php echo htmlspecialchars($item['function']);?></p>
                             </div>
                             <div id="docs" class="tab-item">
                                 <?php if (!empty($item['manual'])): ?>

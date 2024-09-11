@@ -101,7 +101,12 @@ function submitCart() {
         },
         body: JSON.stringify(customerData)
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`Ошибка: ${response.statusText}`);
+        }
+        return response.json();
+    })
     .then(data => {
         console.log('Success:', data);
         localStorage.removeItem('cart'); 
@@ -109,9 +114,11 @@ function submitCart() {
         renderCart();
         const checkoutModal = document.getElementById('checkout-modal');
         checkoutModal.style.display = 'none';
+        alert('Ваш заказ успешно оформлен!');
     })
     .catch((error) => {
         console.error('Error:', error);
+        alert('Произошла ошибка при отправке вашего заказа. Пожалуйста, попробуйте еще раз.');
     });
 }
 
