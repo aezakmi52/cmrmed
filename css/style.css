@@ -53,6 +53,7 @@ a, li{
 
 .container{
     max-width: 1320px;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -78,6 +79,8 @@ button:hover{
 header {
     background-color: rgba(255, 255, 255, 1);
     position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .header-inner {
@@ -120,8 +123,9 @@ header {
     display: flex;
     justify-content: space-between;
     font-size: 20px;
-    padding: 20px 0;
+    padding: 10px 0;
     font-weight: 600;
+    align-items: center;
 }
 
 .header-inner-bot nav ul a:hover {
@@ -138,6 +142,10 @@ header {
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-open {
+    overflow: hidden;
 }
 
 .modal-content {
@@ -163,6 +171,15 @@ header {
     border: 1px rgb(203, 233, 203) solid;
     border-radius: 30px;
     cursor: auto;
+}
+
+#comment {
+    width: 100%; 
+    padding: 10px;
+    resize: vertical; 
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 .close {
@@ -215,8 +232,15 @@ header {
     z-index: 1000;
 }
 
+.cart-count {
+    width: 40px;
+    font-size: 20px;
+    background-color: transparent;
+    color: #000;
+}
+
 .side-cart button{
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .side-cart.open {
@@ -231,6 +255,34 @@ header {
     border-bottom: #e1e1e1 2px solid;
     padding: 10px 0;
 }
+
+.cart-info {
+    margin-top: 10px;
+}
+
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 30px;
+    font-size: 17px;
+    opacity: 0;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+}
+
 /* index */
 
 .carousel {
@@ -512,6 +564,16 @@ footer {
 
 /* страница каталога */
 
+.up-button {
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+    padding: 10px;
+    background-color: rgb(203, 233, 203);
+    border-radius: 20px;
+
+}
+
 .store-page {
     margin-right: 10%;
     margin-left: 2%;
@@ -532,6 +594,7 @@ footer {
 
 .search-container input {
     width: 80%;
+    top: 0;
 }
 
 .wrapper {
@@ -556,7 +619,7 @@ footer {
 .filter-dropdown {
     display: block;
     position: sticky;
-    top: 20px;
+    top: 200px;
     background-color: white;
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
     padding: 15px;
@@ -564,6 +627,7 @@ footer {
     min-width: 400px;
     max-width: 400px;
     border-radius: 30px;
+    height: 700px;
 }
 
 .filter-section {
@@ -592,17 +656,66 @@ footer {
     font-size: 15px;
 }
 
+.micro-filter{
+    overflow-y: scroll;
+    height: 50%;
+    border: 2px solid rgb(93, 141, 93);
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.micro-filter h1 {
+    text-align: center;
+    border-bottom: 2px solid rgb(93, 141, 93);
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    padding-top: 15px;
+}
+
+.micro-filter li {
+    width: 100%;
+    border-bottom: 1px solid rgb(93, 141, 93);
+    padding: 5px 0;
+}
+
+.micro-filter li:hover {
+    background-color: rgb(203, 233, 203);
+} 
+
+::-webkit-scrollbar {
+    width: 12px; 
+    height: 12px; 
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(93, 141, 93); 
+    border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
 .store {
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
 }
 
+
+
 .not-found {
     text-align: center;
     height: 60vh;
     font-size: 30px;
     padding-top: 10%;
+    width: 100%;
 }
 
 .store-card {
@@ -633,24 +746,22 @@ footer {
 }
 
 .store-card h1 {
-    height: 30%;
-    min-height: 30%;
+    height: 25%;
+    min-height: 25%;
 }
 
 /* страница товара*/
 
 .back-button-product {
     position: sticky;
-    top: 30px;
-    left: 30px;
+    top: 155px;
     background-color: rgb(203, 233, 203);
-    padding: 10px;
-    border-radius: 15px;
-    border: 2px solid rgb(93, 141, 93);
+    padding: 10px 10px 10px 20px;
+    border-radius: 0 15px 15px 0;
 }
 
 .product {
-    margin-top: 5%;
+    margin-top: 3%;
     background-color: #fff;
     padding: 20px;
     border-radius: 30px;
@@ -659,13 +770,14 @@ footer {
 
 .product-wrapper {
     display: flex;
-    gap: 50px;
+    gap: 100px;
 }
 
 .product-wrapper img {
     object-fit: contain;
-    width: 40%;
-    min-width: 40%;
+    width: 30%;
+    min-width: 30%;
+    max-width: 30%;
 }
 
 .product-desc h1 {
@@ -687,13 +799,17 @@ footer {
     padding: 40px;
 }
 
-.counter {
-    margin-bottom: 20px;
+.add-to-cart {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content; 
 }
 
 .counter input {
     border: 1px solid rgb(93, 141, 93);
-    padding: 5px;
+    border-radius: 10px;
+    padding: 7px;
 }
 
 .tab-buttons {
@@ -714,6 +830,7 @@ footer {
     border-bottom-right-radius: 0;
     z-index: 1;
     margin-top: 10px;
+    z-index: 2;
 }
 
 .tab-btn.active {
@@ -727,6 +844,7 @@ footer {
     margin-top: -2px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
     background-color: rgb(203, 233, 203);
 }
 
@@ -767,9 +885,19 @@ footer {
     padding: 15px;
 }
 
+/*page contact*/
+
+.contact-info p{
+    font-size: 30px;
+    line-height: 50px;
+}
 
 @media only screen and (max-width: 430px) {
     /* index */
+
+    .container {
+        width: 100%;
+    }
 
     .carousel {
         display: none;
@@ -930,6 +1058,15 @@ footer {
         z-index: 100;
       }
       
+    .menu-list li {
+        text-align: center;
+    }
+
+    #cart-button-mobile {
+        background-color: rgb(203, 233, 203);
+        color: rgb(93, 141, 93);
+    }
+
     .menu-item {
         display: block;
         padding: 8px;
@@ -1026,7 +1163,8 @@ footer {
     
     .filter-btn {
         width: 50%;
-        display: inline-block; 
+        display: inline-block;
+        z-index: 1;
     }
     
     .filter-dropdown {
@@ -1076,10 +1214,13 @@ footer {
 
     .product-wrapper {
         flex-direction: column;
+        align-items: center;
+        gap: 20px;
     }
 
     .product-wrapper img {
         width: 100%;
+        max-width: none;
     }
 
     .search-container {
@@ -1090,6 +1231,48 @@ footer {
         text-align: center;
         font-size: 20px;
         margin-bottom: 20px;
+    }
+
+    .tab-buttons {
+        flex-direction: column;
+    }
+    
+    .tab-btn {
+        padding: 10px 10px;
+        color: rgb(93, 141, 93);
+        background-color: transparent;
+        font-size: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s, margin-top 0.3s;
+        border-radius: 20px;
+        z-index: 1;
+        margin-top: 10px;
+    }
+    
+    .tab-btn.active {
+        background-color: rgb(203, 233, 203);
+        margin-top: 0;
+        z-index: 2;
+    }
+    
+    .tab-content {
+        padding: 15px;
+        margin-top: -2px;
+        border-radius: 20px;
+        background-color: rgb(203, 233, 203);
+        margin-top: 20px;
+    }
+    
+    .tab-item {
+        display: none;
+    }
+    
+    .tab-item.active {
+        display: block;
+    }
+
+    .back-button-product {
+        top: 180px;  
     }
 }
 

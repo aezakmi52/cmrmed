@@ -11,8 +11,8 @@ switch ($page) {
     case 'product':
         $content = 'pages/product.php';
         break;
-    case 'store':
-        $content = 'pages/store.php';
+    case 'polit':
+        $content = 'pages/polit.php';
         break;
     case 'micro':
         $content = 'pages/micro.php';

@@ -1,13 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
     
+    const prod = window.productData ? window.productData.name : '';
+
     const cartButton = document.getElementById('cart-button');
+    const cartButtonMobile = document.getElementById('cart-button-mobile');
     const closeCartButton = document.getElementById('close-cart');
     const sideCart = document.getElementById('side-cart');
     const checkoutModal = document.getElementById('checkout-modal');
     const closeModalButton = document.getElementById('close-modal');
     const checkoutForm = document.getElementById('checkout-form');
 
+    window.addEventListener('popstate', () => {
+        renderCart(); 
+    });
+
     cartButton.addEventListener('click', () => {
+        sideCart.classList.add('open');
+        renderCart();
+    });
+
+    cartButtonMobile.addEventListener('click', () => {
         sideCart.classList.add('open');
         renderCart();
     });
@@ -18,11 +30,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     closeModalButton.addEventListener('click', () => {
         checkoutModal.style.display = 'none';
+        document.body.classList.remove('modal-open');
     });
 
     window.addEventListener('click', (event) => {
         if (event.target == checkoutModal) {
             checkoutModal.style.display = 'none';
+            document.body.classList.remove('modal-open');
         }
     });
 
@@ -32,10 +46,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     renderCart();
+    updateProductQuantityInCart(prod);
 });
 
-let cart = JSON.parse(localStorage.getItem('cart')) || {};
+cart = JSON.parse(localStorage.getItem('cart')) || {};
 
+function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.classList.add('show');
+
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 3000);
+}
 
 function addToCart(productName, quantity) {
     quantity = parseInt(quantity, 10);
@@ -46,32 +70,77 @@ function addToCart(productName, quantity) {
     }
     saveCart();
     renderCart();
+    updateProductQuantityInCart(productName);
+    showToast('Товар добавлен в корзину!')
 }
 
 function removeFromCart(productName) {
     delete cart[productName];
     saveCart();
     renderCart();
+    updateProductQuantityInCart(productName);
+}
+
+function updateProductQuantityInCart(productName) {
+    const cartQuantityElement = document.getElementById('cart-quantity');
+    const productQuantity = cart[productName] || 0;
+    if(cartQuantityElement) {
+        cartQuantityElement.textContent = productQuantity;
+    }
+}
+
+function increaseQuantity(productName) {
+    cart[productName] += 1; 
+    saveCart();
+    renderCart();
+    updateProductQuantityInCart(productName);
+}
+
+function decreaseQuantity(productName) {
+    if (cart[productName] > 1) {
+        cart[productName] -= 1;
+    } else {
+        delete cart[productName]; 
+    }
+    saveCart();
+    renderCart();
+    updateProductQuantityInCart(productName);
 }
 
 function renderCart() {
     const cartContainer = document.getElementById('cart');
+    const cartCountElement = document.getElementById('cart-count');
+    const cartCountMobileElement = document.getElementById('cart-count-mobile');
     cartContainer.innerHTML = ''; 
 
     if (Object.keys(cart).length === 0) {
         cartContainer.innerHTML = '<p>Нет товаров</p>';
+        cartCountElement.textContent = '0';
+        cartCountMobileElement.textContent = '0';
         return;
     }
+
+    let totalItems = 0;
 
     for (const product in cart) {
         const cartItem = document.createElement('div');
         cartItem.className = 'cart-item';
         cartItem.innerHTML = `
-            <span>${product}<br>Кол-во: ${cart[product]}</span>
-            <button onclick="removeFromCart('${product}')">Удалить</button>
+            <span>${product}<br>Кол-во: 
+                <button class="cart-count" onclick="decreaseQuantity('${product}')">-</button>
+                ${cart[product]}
+                <button class="cart-count" onclick="increaseQuantity('${product}')">+</button>
+            </span>
+            <button  onclick="removeFromCart('${product}')">Удалить</button>
         `;
         cartContainer.appendChild(cartItem);
+
+        totalItems += cart[product]
     }
+
+    cartCountElement.textContent = totalItems;
+    cartCountMobileElement.textContent = totalItems;
+    textContent = '0';
 }
 
 function saveCart() {
@@ -81,6 +150,7 @@ function saveCart() {
 function openCheckoutModal() {
     const checkoutModal = document.getElementById('checkout-modal');
     checkoutModal.style.display = 'block';
+    document.body.classList.add('modal-open');
 }
 
 function submitCart() {
@@ -91,6 +161,7 @@ function submitCart() {
         org: formData.get('org'),
         email: formData.get('email'),
         address: formData.get('address'),
+        comment: formData.get('comment'),
         cart: cart
     };
 
@@ -122,5 +193,3 @@ function submitCart() {
     });
 }
 
-
-renderCart();

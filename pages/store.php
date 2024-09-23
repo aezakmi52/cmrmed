@@ -9,11 +9,12 @@
                 if ($result->num_rows > 0) {
                     $item = $result->fetch_assoc();
     ?>
-    <div class="title">Каталог</div>
+    <a href="#title" class="up-button">Наверх</a>
+    <div class="title" id="title">Каталог</div>
     <div class ="container">  
-        <div class="search-container">
+        <div class="search-container" id="search">
             <input type="text" id="search-input" placeholder="Поиск">
-            <button class="clearButton" id="clearButton">Очистить</button>
+            <button class="clearButton" id="searchButton">Найти</button>
         </div>
     </div>
     <div class="store-page">
@@ -81,11 +82,34 @@
                     </div>
                     <button class="apply-filters-btn" id="apply-filters-btn">Применить</button>
                     <button class="reset-filters-btn" id="reset-filters-btn">Сбросить</button>
+                    <div class="micro-filter">
+                    <h1>Микроорганизмы</h1>
+                    <ul>
+                    <?php
+                            $sql = "SELECT distinct micro FROM product
+                                    where micro != '-'
+                                    order by micro asc";
+                            $result = $conn->query($sql);
+                        
+                            if ($result->num_rows > 0) {
+                                while ($row = $result->fetch_assoc()) {
+                                    $microValue = htmlspecialchars($row['micro']);
+                                    echo '<li class="micro-item" data-micro="' . $microValue . '">' . $microValue . '</li>';
+                                }
+                            } else {
+                                echo "No items found";
+                            }
+
+                        ?>
+                    </ul>
+                </div>
                 </div>
             </div> 
             <div class="store-wrapper">
                 <div class="store">
-                    
+                <div id="no-products-message" class="not-found" style="display: none;">
+                    Нет товаров, удовлетворяющих условиям
+                </div>    
                 <?php
                     
                     $sql = "SELECT id, name, photo, art, fabric_name, fabric_filter, category_filter, micro FROM  product  INNER JOIN category on product.category_id = category.category_id 

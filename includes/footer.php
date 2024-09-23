@@ -7,11 +7,10 @@
                 </div>
                 <div class="footer-item">
                     <h1>Навигация</h1>
-                    <a href="?page=store&type=ПЦР">ПЦР</a>
-                    <a href="?page=store&type=ИФА">ИФА</a>
-                    <a href="?page=store&type=Экспресс тесты">Экспресс тесты</a>
-                    <a href="?page=store&type=Оборудование">Оборудование</a>
-                    <a href="?page=store&type=Пит. среды">Питательные среды</a>
+                    <a href="?page=home">Главная</a>    
+                    <a href="?page=store">Каталог</a>
+                    <a href="?page=micro">Микроорганизмы</a> 
+                    <a href="?page=contact">Контакты</a>
                 </div>
                 <div class="footer-item">
                     <h1>Полезная информация</h1>
@@ -23,8 +22,8 @@
                             <img src="img/phone-icon.png" alt="telephone">
                             <a href="">8 991 174-57-00</a>
                         </div>
-                        <a href="">Контакты</a>
-                        <a href="">Политика Конфиденциальности</a>
+                        <a href="?page=contact">Контакты</a>
+                        <a href="?page=polit">Политика Конфиденциальности</a>
                 </div>
             </div>
         </div>

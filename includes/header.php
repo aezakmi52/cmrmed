@@ -19,15 +19,16 @@
             <li><a href="?page=store" class="menu-item">Каталог</a><li>
             <li><a href="?page=micro" class="menu-item">Микроорганизмы</a><li>
             <li><a href="?page=contact" class="menu-item">Контакты</a><li>
+            <button id="cart-button-mobile">Корзина (<span id="cart-count-mobile">0</span>)</button>
         </ul>
-    </div>
-    <button class="cart-button" id="cart-button">Корзина</button>
+    </div> 
     <div id="side-cart" class="side-cart">
         <h2>Корзина</h2>
         <div id="cart" class="cart"></div>
         <button onclick="openCheckoutModal()">Оформить</button>
         <button id="close-cart" class="close-cart">Закрыть</button>
-    </div>   
+    </div>  
+    <div id="toast" class="toast">Товар добавлен в корзину!</div> 
     <div class="container">
         <div class="header-inner">
             <div class="header-inner-top">
@@ -51,6 +52,7 @@
                         <a href="?page=store">Каталог</a>
                         <a href="?page=micro">Микроорганизмы</a> 
                         <a href="?page=contact">Контакты</a>
+                        <button id="cart-button">Корзина (<span id="cart-count">0</span>)</button>
                     </ul>
                 </nav>
             </div>
@@ -67,12 +69,13 @@
                 <input type="text" id="org" name="org" required>
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
-                <label for="address">Адрес</label>
+                <label for="address">Телефон</label>
                 <input type="text" id="address" name="address" required>
+                <label for="comment">Комментарии</label>
+                <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
                 <button type="submit">Оформить заказ</button>
             </form>
         </div>
     </div>
-</div>
 </header>
 <script src="js/cart.js"></script>

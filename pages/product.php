@@ -30,11 +30,16 @@
                                 <li><b>Страна:</b> <?php echo htmlspecialchars($item['country']);?></li>
                                 <li><b>Регистрационное удостоверение:</b> <?php echo htmlspecialchars($item['docs']);?></li>
                             </ul>
-                            <div class="counter">
-                                <label for="quantity">Количество:</label>
-                                <input type="number" id="quantity" name="quantity" value="1" min="1" max="100">
+                            <div class="add-to-cart">
+                                <div class="counter">
+                                    <label for="quantity">Количество:</label>
+                                    <input type="number" id="quantity" name="quantity" value="1" min="1" max="100">
+                                </div>
+                                <button onclick="addToCart('<?php echo htmlspecialchars($item['name']); ?>', document.getElementById('quantity').value)">Добавить в корзину</button>
                             </div>
-                            <button onclick="addToCart('<?php echo htmlspecialchars($item['name']); ?>', document.getElementById('quantity').value)">Добавить в корзину</button>
+                            <div class="cart-info">
+                                <span>В корзине <span id="cart-quantity">0</span> шт. данного товара</span>
+                            </div>
                         </div>
                     </div>
                     <div class="description">
@@ -52,7 +57,7 @@
                                 <p><?php echo nl2br(htmlspecialchars($item['technical']));?></p>
                             </div>
                             <div id="functional" class="tab-item">
-                                <p><?php echo htmlspecialchars($item['function']);?></p>
+                                <p><?php echo nl2br(htmlspecialchars($item['function']));?></p>
                             </div>
                             <div id="docs" class="tab-item">
                                 <?php if (!empty($item['manual'])): ?>
@@ -81,7 +86,7 @@
         <div class="feedback">
             <h1>Обратная связь</h1>
             <p>Наш сотрудник ответит вам в ближайшее время</p>
-            <form action="#" method="post">
+            <form action="feedback.php" method="post">
                 <div>
                     <input type="text" placeholder="Имя">
                     <input type="tel" placeholder="Телефон" pattern="\+?[0-9\s\-\(\)]{7,15}" required>
@@ -91,5 +96,11 @@
         </div>
     </div>
 <script src="js/descriptionsChanged.js"></script>
+<script src="js/cart.js"></script>
+<script>
+    window.productData = {
+        name: "<?php echo isset($item['name']) ? htmlspecialchars($item['name']) : ''; ?>"
+    };
+</script>
 </body>
 </html>
