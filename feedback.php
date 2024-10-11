@@ -41,14 +41,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         try {
 
             $mail->isSMTP();
-            $mail->Host       = 'smtp.mail.ru';
-            $mail->SMTPAuth   = true;
-            $mail->Username   = 'dnogikhin@mail.ru'; 
-            $mail->Password   = 'esorun93';     
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-            $mail->Port       = 587;
+            $mail->Host       = 'mail.cmrmed.ru';
+            $mail->SMTPAuth   = false;
+            $mail->Port       = 465;
 
-            $mail->setFrom('dnogikhin@mail.ru', 'Denis');  
+            $mail->setFrom('sale@cmrmed.ru', 'site');  
             $mail->addAddress('dnogikhin@mail.ru');  
 
             $mail->Subject = 'Новая заявка на обратную связь';

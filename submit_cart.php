@@ -2,13 +2,9 @@
 
 include 'config.php';
 
-require 'vendor/autoload.php';
-
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
+ini_set('display_errors', 0); 
+ini_set('log_errors', 1);  
+error_reporting(E_ALL);
 
 if ($conn->connect_error) {
     die(json_encode(['status' => 'error', 'message' => 'Connection failed: ' . $conn->connect_error]));
@@ -54,24 +50,14 @@ foreach ($cart_items as $product_name => $quantity) {
     $message .= "Товар: $product_name, Количество: $quantity\n";
 }
 
-$mail = new PHPMailer(true);
 
-try {
-    $mail->isSMTP();
-    $mail->Host = 'mail.cmrmed.ru'; 
-    $mail->SMTPAuth = false;
-    $mail->Port = 465;
+$to = 'dnogikhin@mail.ru';
+$subject = 'Получен новый заказ';
+$headers = "From: sale@cmrmed.ru" . "\r\n" .
+           "Reply-To: sale@cmrmed.ru" . "\r\n" .
+           "X-Mailer: PHP/" . phpversion();
 
-    $mail->setFrom('sale@cmrmed.ru', 'site'); 
-
-    $mail->addAddress('dnogikhin@mail.ru');
-
-    $mail->Subject = 'Получен новый заказ';
-
-    $mail->Body = $message;
-
-    $mail->send();
-
+if (mail($to, $subject, $message, $headers)) {
     $conn->close();
 
     echo json_encode([
@@ -79,11 +65,11 @@ try {
         'message' => 'Заказ получен и сохранен, письмо отправлено',
         'cart' => $cart_items
     ]);
-
-} catch (Exception $e) {
+} else {
     echo json_encode([
         'status' => 'error',
-        'message' => 'Ошибка отправки email: ' . $mail->ErrorInfo
+        'message' => 'Ошибка отправки email'
     ]);
 }
+
 ?>

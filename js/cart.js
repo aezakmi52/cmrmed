@@ -186,6 +186,7 @@ function submitCart() {
         const checkoutModal = document.getElementById('checkout-modal');
         checkoutModal.style.display = 'none';
         alert('Ваш заказ успешно оформлен!');
+        console.log(JSON.stringify(customerData));
     })
     .catch((error) => {
         console.error('Error:', error);
