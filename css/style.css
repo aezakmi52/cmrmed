@@ -571,7 +571,7 @@ footer {
     padding: 10px;
     background-color: rgb(203, 233, 203);
     border-radius: 20px;
-
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .store-page {
@@ -858,31 +858,46 @@ footer {
 
 /* page micro*/
 
-.accordion {
-    margin: 20px 0;
-    border: 1px solid rgb(93, 141, 93);
-    border-radius: 15px;
-    overflow: hidden;
+#sort {
+    border-radius: 20px;
+    padding: 5px;
 }
 
-.accordion-header {
-    background-color: rgb(93, 141, 93);
-    padding: 15px;
+.sorting {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+.layout {
+    display: flex;
+}
+.sidebar {
+    width: 30%;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+}
+.tab-button-micro {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #e3e3e3;
+    border: none;
     cursor: pointer;
-    color: #fff;
+    text-align: left;
+    font-size: 16px;
+    color: #000;
 }
-
-.accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    padding: 0 15px;
-    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-    overflow-y: scroll;
+.content {
+    width: 70%;
+    padding: 20px;
 }
-
-.accordion-content.open {
-    max-height: 700px; 
-    padding: 15px;
+.tab-content-micro {
+    display: none; 
+}
+h2#activeTabTitle {
+    margin-bottom: 20px;
+    font-size: 30px;
 }
 
 /*page contact*/
