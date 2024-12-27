@@ -60,16 +60,21 @@
                                 <p><?php echo nl2br(htmlspecialchars($item['function']));?></p>
                             </div>
                             <div id="docs" class="tab-item">
-                                <?php if (!empty($item['manual'])): ?>
-                                    <a href="pdf/<?php echo htmlspecialchars($item['manual']); ?>" target="_blank">Инструкция &gt;</a>
-                                <?php else: ?>
-                                    <p><b>Инструкция:</b> Нет документации</p>
-                                <?php endif; ?>
-                                <?php if (!empty($item['certificate'])): ?>
-                                    <a href="pdf/<?php echo htmlspecialchars($item['certificate']); ?>" target="_blank">Регистрационное удостоверение &gt;</a>
-                                <?php else: ?>
-                                    <p><b>Регистрационное удостоверение:</b> Нет документации</p>
-                                <?php endif; ?>
+                            <?php if (!empty($item['certificate'])): ?>
+                                <b>Инструкции и сертификаты:</b>
+                                <ul>
+                                    <?php 
+                                    $certificates = explode(',', $item['certificate']);
+                                    foreach ($certificates as $certificate): 
+                                        $certificate = trim($certificate); 
+                                    ?>
+                                        <li><a href="pdf/<?php echo htmlspecialchars($certificate); ?>" target="_blank">> <?php echo htmlspecialchars($certificate); ?></a></li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            <?php else: ?>
+                                <p><b>Инструкции и сертификаты:</b> Нет документации</p>
+                            <?php endif; ?>                                
+                                <p><b>Регистрационное удостоверение: </b><?php echo htmlspecialchars($item['docs']); ?></p>
                             </div>
                         </div>
                     </div>

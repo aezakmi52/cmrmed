@@ -1,40 +1,10 @@
-const searchInput = document.getElementById('search-input');
-const searchButton = document.getElementById('searchButton');
+function applySearch() {
+    const searchInput = document.getElementById('search-input').value.trim();
+    const manufacturer = document.getElementById('manufacturer').value;
+    const category = document.getElementById('category').value;
 
-searchButton.addEventListener('click', () => {
-    const query = searchInput.value.toLowerCase();
-    searchItems(query);
-});
+    const activeMicro = document.querySelector('.micro-item.active');
+    const micro = activeMicro ? activeMicro.getAttribute('data-micro') : 'all';
 
-searchInput.addEventListener('input', () => {
-    const query = searchInput.value.toLowerCase();
-    
-    if (query === '') {
-        showAllItems();
-    }
-});
-
-function searchItems(query) {
-    const items = document.querySelectorAll('.store-card');
-
-    if (query !== '') {
-        items.forEach(item => {
-            const itemName = item.querySelector('h1').textContent.toLowerCase();
-            const itemCategory = item.querySelector('p').textContent.toLowerCase();
-
-            if (itemName.includes(query) || itemCategory.includes(query)) {
-                item.style.display = 'block';
-            } else {
-                item.style.display = 'none';
-            }
-        });
-    }
-}
-
-function showAllItems() {
-    const items = document.querySelectorAll('.store-card');
-    
-    items.forEach(item => {
-        item.style.display = 'block';
-    });
+    window.location.href = `?page=store&search=${encodeURIComponent(searchInput)}&manufacturer=${manufacturer}&micro=${micro}&category=${category}`;
 }

@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="/wp-content/uploads/favicon-1.png" sizes="any">
+                <link rel="apple-touch-icon" href="/wp-content/uploads/apple-touch-icon-1.png">
+                <meta name='robots' content='noindex, follow' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	
+	<!-- This site is optimized with the Yoast SEO plugin v24.0 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Страница не найдена - МИКРО-ЛАБ</title>
+	<meta property="og:locale" content="ru_RU" />
+	<meta property="og:title" content="Страница не найдена - МИКРО-ЛАБ" />
+	<meta property="og:site_name" content="МИКРО-ЛАБ" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://micro-lab.org/#website","url":"https://micro-lab.org/","name":"МИКРО-ЛАБ","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://micro-lab.org/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"ru-RU"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-family--inter: "Inter", sans-serif;--wp--preset--font-family--cardo: Cardo;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<style id='woocommerce-inline-inline-css' type='text/css'>
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<link rel='stylesheet' id='aws-style-css' href='https://micro-lab.org/wp-content/plugins/advanced-woo-search/assets/css/common.min.css' type='text/css' media='all' />
+<link href="https://micro-lab.org/wp-content/themes/microlab/css/theme.1.css?ver=1733228547" rel="stylesheet">
+<script type="text/javascript" src="https://micro-lab.org/wp-content/plugins/wp-yandex-metrika/assets/YmEc.min.js" id="wp-yandex-metrika_YmEc-js"></script>
+<script type="text/javascript" id="wp-yandex-metrika_YmEc-js-after">
+/* <![CDATA[ */
+window.tmpwpym={datalayername:'dataLayer',counters:JSON.parse('[{"number":"71399263","webvisor":"1"}]'),targets:JSON.parse('[]')};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://micro-lab.org/wp-includes/js/jquery/jquery.min.js" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://micro-lab.org/wp-includes/js/jquery/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="https://micro-lab.org/wp-content/plugins/wp-yandex-metrika/assets/frontend.min.js" id="wp-yandex-metrika_frontend-js"></script>
+<script type="text/javascript" src="https://micro-lab.org/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js" id="jquery-blockui-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" id="wc-add-to-cart-js-extra">
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"\u041f\u043e\u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u043c\u043e\u044e \u0437\u0430\u044f\u0432\u043a\u0443","cart_url":"https:\/\/micro-lab.org\/cart\/","is_cart":"","cart_redirect_after_add":"no"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://micro-lab.org/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js" id="wc-add-to-cart-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" src="https://micro-lab.org/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js" id="js-cookie-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" id="woocommerce-js-extra">
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://micro-lab.org/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js" id="woocommerce-js" defer="defer" data-wp-strategy="defer"></script>
+
+<meta name="verification" content="f612c7d25f5690ad41496fcfdbf8d1" />	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	        <!-- Yandex.Metrica counter -->
+        <script type="text/javascript">
+            (function (m, e, t, r, i, k, a) {
+                m[i] = m[i] || function () {
+                    (m[i].a = m[i].a || []).push(arguments)
+                };
+                m[i].l = 1 * new Date();
+                k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+            })
+
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+            ym("71399263", "init", {
+                clickmap: true,
+                trackLinks: true,
+                accurateTrackBounce: true,
+                webvisor: true,
+                ecommerce: "dataLayer",
+                params: {
+                    __ym: {
+                        "ymCmsPlugin": {
+                            "cms": "wordpress",
+                            "cmsVersion":"6.7",
+                            "pluginVersion": "1.2.1",
+                            "ymCmsRip": "3823606981"
+                        }
+                    }
+                }
+            });
+        </script>
+        <!-- /Yandex.Metrica counter -->
+        <script src="https://micro-lab.org/wp-content/themes/microlab/vendor/assets/uikit/dist/js/uikit.min.js?ver=4.4.10"></script>
+<script src="https://micro-lab.org/wp-content/themes/microlab/vendor/assets/uikit/dist/js/uikit-icons-fuse.min.js?ver=4.4.10"></script>
+<script src="https://micro-lab.org/wp-content/themes/microlab/js/theme.js?ver=4.4.10"></script>
+<script>window.yootheme ||= {}; var $theme = yootheme.theme = {"i18n":{"close":{"label":"Close"},"totop":{"label":"Back to top"},"marker":{"label":"Open"},"navbarToggleIcon":{"label":"Open menu"},"paginationPrevious":{"label":"Previous page"},"paginationNext":{"label":"Next page"},"searchIcon":{"toggle":"Open Search","submit":"Submit Search"},"slider":{"next":"Next slide","previous":"Previous slide","slideX":"Slide %s","slideLabel":"%s of %s"},"slideshow":{"next":"Next slide","previous":"Previous slide","slideX":"Slide %s","slideLabel":"%s of %s"},"lightboxPanel":{"next":"Next slide","previous":"Previous slide","slideLabel":"%s of %s","close":"Close"}}};</script>
+<style class='wp-fonts-local' type='text/css'>
+@font-face{font-family:Inter;font-style:normal;font-weight:300 900;font-display:fallback;src:url('https://micro-lab.org/wp-content/plugins/woocommerce/assets/fonts/Inter-VariableFont_slnt,wght.woff2') format('woff2');font-stretch:normal;}
+@font-face{font-family:Cardo;font-style:normal;font-weight:400;font-display:fallback;src:url('https://micro-lab.org/wp-content/plugins/woocommerce/assets/fonts/cardo_normal_400.woff2') format('woff2');}
+</style>
+		<style type="text/css" id="wp-custom-css">
+			.sku-and-manufacturer-wrapper {
+	display: flex; 
+	flex-wrap: wrap; 
+	color: gray;
+	margin-right: 30px;
+}
+
+.sku, 
+.pa_proizvoditel,
+.pa_fasovka
+{
+	font-size: 14px;
+	padding-top: 10px;
+}
+
+tr.productDescription .sku, 
+tr.productDescription .pa_proizvoditel,
+tr.productDescription .pa_fasovka
+{
+  padding: 8px 4px;
+	padding-right: 30px;
+	color: gray;
+}
+
+.napravlenia_images{
+	margin: 0 15px 15px 0;
+}		</style>
+		    </head>
+    <body class="error404  theme-microlab woocommerce-no-js">
+
+        
+        <div class="uk-hidden-visually uk-notification uk-notification-top-left uk-width-auto">
+            <div class="uk-notification-message">
+                <a href="#tm-main">Skip to main content</a>
+            </div>
+        </div>
+
+        
+        
+        <div class="tm-page">
+
+                        
+
+
+<header class="tm-header-mobile uk-hidden@l">
+
+
+    
+        <div class="uk-navbar-container">
+
+            <div class="uk-container uk-container-expand">
+                <nav class="uk-navbar" uk-navbar="{&quot;align&quot;:&quot;left&quot;,&quot;container&quot;:&quot;.tm-header-mobile&quot;,&quot;boundary&quot;:&quot;.tm-header-mobile .uk-navbar-container&quot;}">
+
+                                        <div class="uk-navbar-left">
+
+                        
+                                                    <a uk-toggle href="#tm-dialog-mobile" class="uk-navbar-toggle">
+
+        
+        <div uk-navbar-toggle-icon></div>
+
+        
+    </a>                        
+                    </div>
+                    
+                                        <div class="uk-navbar-center">
+
+                                                    <a href="https://micro-lab.org/" aria-label="Вернуться в начало" class="uk-logo uk-navbar-item">
+    <picture>
+<source type="image/webp" srcset="/wp-content/themes/microlab/cache/ba/logo-ba250c03.webp 130w, /wp-content/themes/microlab/cache/e0/logo-e02325a1.webp 260w" sizes="(min-width: 130px) 130px">
+<img alt loading="eager" src="/wp-content/themes/microlab/cache/34/logo-346ed422.png" width="130" height="60">
+</picture></a>                        
+                        
+                    </div>
+                    
+                    
+                </nav>
+            </div>
+
+        </div>
+
+    
+
+
+
+        <div id="tm-dialog-mobile" uk-offcanvas="container: true; overlay: true" mode="slide">
+        <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+                        <button class="uk-offcanvas-close uk-close-large" type="button" uk-close uk-toggle="cls: uk-close-large; mode: media; media: @s"></button>
+            
+                        <div class="uk-margin-auto-bottom">
+                
+<div class="uk-grid uk-child-width-1-1" uk-grid>    <div>
+<div class="uk-panel widget widget_nav_menu" id="nav_menu-2">
+
+    
+    
+<ul class="uk-nav uk-nav-default">
+    
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home"><a href="https://micro-lab.org/">Главная</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children uk-parent"><a href="https://micro-lab.org/o-kompanii/">О компании</a>
+	<ul class="uk-nav-sub">
+
+		<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://micro-lab.org/o-kompanii/o-nas/">О нас</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://micro-lab.org/o-kompanii/vakansii/">Вакансии</a></li></ul></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://micro-lab.org/category/novosti/">Новости</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://micro-lab.org/category/aktsii/">Акции</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://micro-lab.org/katalog/">Каталог</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children uk-parent"><a href="https://micro-lab.org/informatsiya/">Информация</a>
+	<ul class="uk-nav-sub">
+
+		<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://micro-lab.org/informatsiya/razreshitelnaya-dokumentatsiya/">Разрешительная документация</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://micro-lab.org/informatsiya/metodicheskie-materialy/">Методические материалы</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://micro-lab.org/informatsiya/katalogi/">Каталоги</a></li></ul></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://micro-lab.org/kontakty/">Контакты</a></li></ul>
+
+</div>
+</div>    <div>
+<div class="uk-panel widget widget_builderwidget" id="builderwidget-3">
+
+    
+    <div class="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
+<div class="uk-width-1-1">
+    
+        
+            
+            
+            
+                
+                    
+<div class="uk-margin uk-text-left">
+        <div class="uk-flex-middle uk-grid-small uk-child-width-1-1" uk-grid>    
+    
+                <div class="el-item">
+        
+        
+<a class="el-content uk-width-1-1 uk-button uk-button-default uk-flex-inline uk-flex-center uk-flex-middle" href="https://micro-lab.org/cart/">
+        <span class="uk-margin-small-right" uk-icon="cart"></span>    
+        Моя заявка    
+    
+</a>
+
+                </div>
+        
+    
+                <div class="el-item">
+        
+        
+<a class="el-content uk-width-1-1 uk-button uk-button-default uk-flex-inline uk-flex-center uk-flex-middle" href="https://micro-lab.org/poisk-po-sajtu/">
+        <span class="uk-margin-small-right" uk-icon="search"></span>    
+        Поиск    
+    
+</a>
+
+                </div>
+        
+    
+        </div>    
+</div>
+
+                
+            
+        
+    
+</div></div>
+</div>
+</div></div>            </div>
+            
+            
+        </div>
+    </div>
+    
+    
+    
+
+</header>
+
+
+<div class="tm-toolbar tm-toolbar-default uk-visible@l">
+    <div class="uk-container uk-flex uk-flex-middle">
+
+                <div>
+            <div class="uk-grid-medium uk-child-width-auto uk-flex-middle" uk-grid="margin: uk-margin-small-top">
+
+                                <div>
+<div class="uk-panel widget widget_custom_html" id="custom_html-2">
+
+    
+    <div class="textwidget custom-html-widget"><a href="https://micro-lab.org/"><img src="/wp-content/uploads/logo.png" width="190" alt="logo"></a></div>
+</div>
+</div><div>
+<div class="uk-panel widget widget_custom_html" id="custom_html-4">
+
+    
+    <div class="textwidget custom-html-widget"><div class="slogan uk-text-secondary">Оптимальные решения для микробиологических лабораторий</div></div>
+</div>
+</div>                
+                
+            </div>
+        </div>
+        
+                <div class="uk-margin-auto-left">
+            <div class="uk-grid-medium uk-child-width-auto uk-flex-middle" uk-grid="margin: uk-margin-small-top">
+                <div>
+<div class="uk-panel widget widget_custom_html" id="custom_html-9">
+
+    
+    <div class="textwidget custom-html-widget"><div class="uk-margin-right">
+	<a href="tel:+7499399 3236">+7 (499) 399 32 36</a>
+<br>
+<a href="mailto:info@micro-lab.org">info@micro-lab.org</a>	
+</div></div>
+</div>
+</div><div>
+<div class="uk-panel widget widget_custom_html" id="custom_html-8">
+
+    
+    <div class="textwidget custom-html-widget"><div class="uk-margin-right">
+<span uk-icon="desktop"></span> 
+<a href="/my-account/" class="uk-text-underline">Личный кабинет</a>
+</div></div>
+</div>
+</div><div>
+<div class="uk-panel widget widget_custom_html" id="custom_html-7">
+
+    
+    <div class="textwidget custom-html-widget"><a href="/cart/" class="uk-button uk-button-primary">Моя заявка</a></div>
+</div>
+</div>            </div>
+        </div>
+        
+    </div>
+</div>
+
+<header class="tm-header uk-visible@l">
+
+
+
+    
+        <div class="uk-navbar-container">
+
+            <div class="uk-container">
+                <nav class="uk-navbar" uk-navbar="{&quot;align&quot;:&quot;left&quot;,&quot;container&quot;:&quot;.tm-header&quot;,&quot;boundary&quot;:&quot;.tm-header .uk-navbar-container&quot;}">
+
+                    
+                                        <div class="uk-navbar-center">
+
+                        
+                                                    
+<ul class="uk-navbar-nav">
+    
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home"><a href="https://micro-lab.org/">Главная</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children uk-parent"><a href="https://micro-lab.org/o-kompanii/">О компании</a>
+	<div class="uk-drop uk-navbar-dropdown"><div><ul class="uk-nav uk-navbar-dropdown-nav">
+
+		<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://micro-lab.org/o-kompanii/o-nas/">О нас</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://micro-lab.org/o-kompanii/vakansii/">Вакансии</a></li></ul></div></div></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://micro-lab.org/category/novosti/">Новости</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://micro-lab.org/category/aktsii/">Акции</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://micro-lab.org/katalog/">Каталог</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children uk-parent"><a href="https://micro-lab.org/informatsiya/">Информация</a>
+	<div class="uk-drop uk-navbar-dropdown"><div><ul class="uk-nav uk-navbar-dropdown-nav">
+
+		<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://micro-lab.org/informatsiya/razreshitelnaya-dokumentatsiya/">Разрешительная документация</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://micro-lab.org/informatsiya/metodicheskie-materialy/">Методические материалы</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://micro-lab.org/informatsiya/katalogi/">Каталоги</a></li></ul></div></div></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://micro-lab.org/kontakty/">Контакты</a></li></ul>
+
+<div class="uk-navbar-item search-button widget widget_custom_html" id="custom_html-13">
+
+    
+    <div class="textwidget custom-html-widget"><a href="/poisk-po-sajtu/" class="uk-button uk-button-search uk-light"><span uk-icon="icon: search" class="uk-margin-small-right"></span>Поиск</a></div>
+</div>
+                        
+                    </div>
+                    
+                    
+                </nav>
+            </div>
+
+        </div>
+
+    
+
+
+
+
+
+
+
+</header>
+
+            
+            
+<div class="tm-top uk-section-default uk-section uk-section-small">
+
+    
+        
+        
+        
+                        <div class="uk-container">
+            
+                
+<div class="uk-panel uk-visible@m widget widget_breadcrumbs" id="breadcrumbs-3">
+
+    
+    
+
+
+
+<nav class="uk-margin-medium-bottom" aria-label="Breadcrumb">
+    <ul class="uk-breadcrumb" vocab="https://schema.org/" typeof="BreadcrumbList">
+    
+            <li property="itemListElement" typeof="ListItem">            <span property="name" aria-current="page">Главная</span>            <meta property="position" content="1">
+            </li>    
+    </ul>
+</nav>
+
+
+</div>
+
+                        </div>
+            
+        
+    
+</div>
+
+            <main id="tm-main"  class="tm-main uk-section uk-section-default" uk-height-viewport="expand: true">
+
+                                <div class="uk-container">
+
+                    
+                            
+                
+<h1 class="uk-heading-medium uk-text-center">К сожалению, эта страница не найдена.</h1>
+
+<p class="uk-text-large uk-text-center uk-margin-large-bottom">Похоже, что ничего не было найдено. Попробовать Поиск?</p>
+
+<div class="uk-text-center">
+
+    <form id="search-2" action="https://micro-lab.org/" method="get" role="search" class="uk-search uk-search-default"><span uk-search-icon></span><input name="s" placeholder="Поиск" required aria-label="Поиск" type="search" class="uk-search-input"></form>
+
+
+
+
+
+</div>
+
+        
+                        
+                </div>
+                
+            </main>
+
+            
+                        <footer>
+                <!-- Builder #footer --><style class="uk-margin-remove-adjacent">#footer\#0 .el-image{min-width: 100%;}</style>
+<div class="uk-section-default uk-section uk-padding-remove-vertical">
+    
+        
+        
+        
+            
+                
+                    <div class="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
+<div class="uk-width-1-1@m">
+    
+        
+            
+            
+            
+                
+                    
+<div class="uk-margin uk-text-center" id="footer#0">
+        <picture>
+<source type="image/webp" srcset="/wp-content/themes/microlab/cache/65/footer-bg2-655510c1.webp 768w, /wp-content/themes/microlab/cache/a9/footer-bg2-a9dac270.webp 1024w, /wp-content/themes/microlab/cache/1b/footer-bg2-1bfd15bb.webp 1366w, /wp-content/themes/microlab/cache/83/footer-bg2-83ef7116.webp 1600w, /wp-content/themes/microlab/cache/e4/footer-bg2-e4fa51de.webp 1920w, /wp-content/themes/microlab/cache/28/footer-bg2-2844bb5c.webp 1970w" sizes="(min-width: 1970px) 1970px">
+<img src="/wp-content/themes/microlab/cache/dc/footer-bg2-dcc5f8d6.png" width="1970" height="350" class="el-image" alt loading="lazy">
+</picture>    
+    
+</div>
+                
+            
+        
+    
+</div></div>
+                
+            
+        
+    
+</div>
+<div class="footer uk-light uk-section-default uk-section">
+    
+        
+        
+        
+            
+                                <div class="uk-container">                
+                    <div class="uk-grid tm-grid-expand uk-grid-margin" uk-grid>
+<div class="uk-width-1-2@s uk-width-1-4@m">
+    
+        
+            
+            
+            
+                
+                    <div><h3>Контакты</h3>
+<p><a href="tel:+74993993236">+7 (499) 399-32-36</a></p>
+<p><a href="/kontakty/">129323, г. Москва, пр-д. Русанова, д.&nbsp;2, стр.&nbsp;1, пом.&nbsp;1, ком.&nbsp;29</a></p> 
+<p><a href="mailto:info@micro-lab.org" class="uk-text-underline">info@micro-lab.org</a></p></div>
+                
+            
+        
+    
+</div>
+<div class="uk-width-1-2@s uk-width-1-4@m">
+    
+        
+            
+            
+            
+                
+                    <div><h3>Карта сайта</h3>
+		<ul class="uk-list">
+            <li><a href="/o-kompanii/">О компании</a></li>
+	        <li><a href="/category/novosti/">Новости</a></li>
+	        <li><a href="/category/aktsii/">Акции</a></li>
+	        <li><a href="/katalog/">Каталог</a></li>
+	        <li><a href="/informatsiya/">Информация</a></li>
+	        <li><a href="/kontakty/">Контакты</a></li>
+		</ul>
+</div>
+                
+            
+        
+    
+</div>
+<div class="uk-width-1-1@s uk-width-1-2@m">
+    
+        
+            
+            
+            
+                
+                    
+<h3>        Политика конфиденциальности    </h3><div class="uk-panel uk-text-small uk-margin"><p>Данный сайт не является средством массовой информации (СМИ). Вся представленная информация не является публичной офертой, предусмотренной ст. 437&nbsp;ГК&nbsp;РФ. Приведенные характеристики товаров, включая изображения, представлены исключительно для ознакомления и могут отличаться от реальных. Для получения более 
+подробной информации, пожалуйста, обращайтесь к сотрудникам ООО&nbsp;«МИКРО-ЛАБ».
+<p><a href="/politika-obrabotki-personalnyh-dannyh/" class="uk-text-underline">Политика обработки персональных данных</a></div>
+                
+            
+        
+    
+</div></div><div class="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
+<div class="uk-width-1-1@m">
+    
+        
+            
+            
+            
+                
+                    <div><div class="uk-text-center uk-text-small uk-card uk-card-body uk-card-primary uk-card-small">
+Все права защищены &copy; 2020 ООО &laquo;МИКРО-ЛАБ&raquo;
+</div></div>
+                
+            
+        
+    
+</div></div>
+                                </div>                
+            
+        
+    
+</div>            </footer>
+            
+        </div>
+
+        
+                    <noscript>
+                <div>
+                    <img src="https://mc.yandex.ru/watch/71399263" style="position:absolute; left:-9999px;" alt=""/>
+                </div>
+            </noscript>
+            	<script type='text/javascript'>
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+	<link rel='stylesheet' id='wc-blocks-style-css' href='https://micro-lab.org/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css' type='text/css' media='all' />
+<script type="text/javascript" src="https://micro-lab.org/wp-content/plugins/wp-yandex-metrika/assets/woocommerce.min.js" id="wp-yandex-metrika_woocommerce-js"></script>
+<script type="text/javascript" id="wp-yandex-metrika_woocommerce-js-after">
+/* <![CDATA[ */
+jQuery(document.body).on('wpym_ec_ready', function(){if (typeof wpym !== 'undefined' && wpym.ec) {wpym.ajaxurl = 'https://micro-lab.org/wp-admin/admin-ajax.php';wpym.ec.addData({"currency":"RUB"});}})
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://micro-lab.org/wp-content/plugins/wp-yandex-metrika/assets/contactFormSeven.min.js" id="wp-yandex-metrika_contact-form-7-js"></script>
+<script type="text/javascript" id="aws-script-js-extra">
+/* <![CDATA[ */
+var aws_vars = {"sale":"\u0420\u0430\u0441\u043f\u0440\u043e\u0434\u0430\u0436\u0430!","sku":"SKU: ","showmore":"\u041f\u043e\u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u0432\u0441\u0435 \u0440\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442\u044b","noresults":"\u041d\u0435\u0442 \u0440\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442\u043e\u0432"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://micro-lab.org/wp-content/plugins/advanced-woo-search/assets/js/common.min.js" id="aws-script-js"></script>
+<script type="text/javascript" src="https://micro-lab.org/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js" id="sourcebuster-js-js"></script>
+<script type="text/javascript" id="wc-order-attribution-js-extra">
+/* <![CDATA[ */
+var wc_order_attribution = {"params":{"lifetime":1.0e-5,"session":30,"base64":false,"ajaxurl":"https:\/\/micro-lab.org\/wp-admin\/admin-ajax.php","prefix":"wc_order_attribution_","allowTracking":true},"fields":{"source_type":"current.typ","referrer":"current_add.rf","utm_campaign":"current.cmp","utm_source":"current.src","utm_medium":"current.mdm","utm_content":"current.cnt","utm_id":"current.id","utm_term":"current.trm","utm_source_platform":"current.plt","utm_creative_format":"current.fmt","utm_marketing_tactic":"current.tct","session_entry":"current_add.ep","session_start_time":"current_add.fd","session_pages":"session.pgs","session_count":"udata.vst","user_agent":"udata.uag"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://micro-lab.org/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js" id="wc-order-attribution-js"></script>
+<script type="text/javascript" src="https://www.google.com/recaptcha/api.js?render=6Leu9DwaAAAAALZ8LO5cAHhlCZ3dQs6Q-013PdHN" id="google-recaptcha-js"></script>
+<script type="text/javascript" src="https://micro-lab.org/wp-includes/js/dist/vendor/wp-polyfill.min.js" id="wp-polyfill-js"></script>
+<script type="text/javascript" id="wpcf7-recaptcha-js-before">
+/* <![CDATA[ */
+var wpcf7_recaptcha = {
+    "sitekey": "6Leu9DwaAAAAALZ8LO5cAHhlCZ3dQs6Q-013PdHN",
+    "actions": {
+        "homepage": "homepage",
+        "contactform": "contactform"
+    }
+};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://micro-lab.org/wp-content/plugins/contact-form-7/modules/recaptcha/index.js" id="wpcf7-recaptcha-js"></script>
+        <script type='application/ld+json'> 
+{
+  "@context": "http://www.schema.org",
+  "@type": "Organization",
+  "name": "МИКРО-ЛАБ",
+  "url": "https://micro-lab.org",
+  "logo": "https://micro-lab.org/wp-content/uploads/logo.png",
+  "description": "Оптимальные решения для микробиологических лабораторий",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Кольская 14",
+    "addressLocality": "Москва",
+    "postalCode": "129329",
+    "addressCountry": "Россия"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+7 (499) 399-32-36"
+  }
+}
+ </script>
+ <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(71399263, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/71399263" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+ <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0MWQJERYHN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0MWQJERYHN');
+</script>
+
+<script>
+  jQuery(document).ready(function() {
+    jQuery(".dgwt-wcas-search-form").submit(function(event){ 
+        event.preventDefault(); 
+
+        jQuery('.dgwt-wcas-search-wrapp').after('<div style="color: white; padding-top: 20px; font-size: 14px; text-align: center;">Пожалуйста, выберите необходимый результат во всплывающем окне.</div>')
+    }); 
+
+   });
+</script>
+    </body>
+</html>

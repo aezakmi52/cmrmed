@@ -128,7 +128,11 @@ header {
     align-items: center;
 }
 
-.header-inner-bot nav ul a:hover {
+.nav-link.active { 
+    color: rgb(93, 141, 93);
+}
+
+.nav-link:hover {
     color: rgb(93, 141, 93);
 }
 
@@ -585,23 +589,40 @@ footer {
     margin-top: 3%;
 }
 
+.top-filter {
+    margin-right: 10%;
+    margin-left: 2%;
+    margin-top: 2%;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 30px 30px 30px 0;
+    padding: 30px;
+}
+
 .search-container {
     border: #ddd solid 1px;
     text-align: center;
     border-radius: 30px;
-    margin-top: 3%;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    width: 25%;
 }
 
 .search-container input {
-    width: 80%;
-    top: 0;
+    padding-left: 20px;
+}
+
+#forSearch {
+    display: flex;
+    justify-content: space-between;
 }
 
 .wrapper {
     display: flex;
     flex-direction: row;
     gap: 50px;
-    margin: 5% 0;
+    margin-bottom: 3%;
 }
 
 .filter-container {
@@ -618,16 +639,14 @@ footer {
 
 .filter-dropdown {
     display: block;
-    position: sticky;
-    top: 200px;
     background-color: white;
-    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     padding: 15px;
     z-index: 1;
     min-width: 400px;
     max-width: 400px;
-    border-radius: 30px;
-    height: 700px;
+    border-radius:  0 0 30px 30px;
+    height: 600px;
 }
 
 .filter-section {
@@ -640,7 +659,24 @@ footer {
 }
 
 .filter-section select {
-    width: 80%;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.filter-section-top {
+    width: 22%;
+}
+
+.filter-section-top label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.filter-section-top select {
+    width: 100%;
     padding: 8px;
     margin-bottom: 5px;
     border: 1px solid #ddd;
@@ -651,16 +687,24 @@ footer {
     width: 50%;
 }
 
-.filter-dropdown option {
+.reset-filters-btn {
+    margin-top: 20px;
+}
+
+.filter-section-top option {
+    color: rgb(93, 141, 93);
+    font-size: 15px;
+}
+
+.filter-section option {
     color: rgb(93, 141, 93);
     font-size: 15px;
 }
 
 .micro-filter{
     overflow-y: scroll;
-    height: 50%;
+    height: 85%;
     border: 2px solid rgb(93, 141, 93);
-    margin-top: 20px;
     border-radius: 20px;
 }
 
@@ -673,6 +717,13 @@ footer {
     padding-top: 15px;
 }
 
+.micro-item.active {
+    font-weight: bold;
+    color: white;
+    background-color: rgb(93, 141, 93);
+    cursor: pointer;
+}
+
 .micro-filter li {
     width: 100%;
     border-bottom: 1px solid rgb(93, 141, 93);
@@ -681,6 +732,7 @@ footer {
 
 .micro-filter li:hover {
     background-color: rgb(203, 233, 203);
+    color: #000;
 } 
 
 ::-webkit-scrollbar {
@@ -706,6 +758,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
+    padding-top: 40px;
 }
 
 
@@ -748,6 +801,33 @@ footer {
 .store-card h1 {
     height: 25%;
     min-height: 25%;
+    overflow-y: hidden;
+}
+
+.pagination {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.pagination-link {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 0 5px;
+    background-color: #f0f0f0;
+    color: #000;
+    text-decoration: none;
+    border-radius: 15px;
+    margin-top: 5px;
+}
+
+.pagination-link.active {
+    font-weight: bold;
+    background-color: rgb(93, 141, 93);
+    color: white;
+}
+
+.pagination-link:hover {
+    background-color: #ddd;
 }
 
 /* страница товара*/
@@ -856,6 +936,13 @@ footer {
     display: block;
 }
 
+.tab-item li {
+    padding: 10px 0;
+}
+
+.tab-item li:hover {
+    color: #000;
+}
 /* page micro*/
 
 #sort {
@@ -964,6 +1051,28 @@ h2#activeTabTitle {
         width: 100%;
         margin-bottom: 5%;
 
+    }
+
+    #forSearch {
+        flex-direction: column;
+    }
+
+    .search-container {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .top-filter {
+        margin: 20px;
+        border-radius: 30px;
+    }
+
+    .filter-section-top {
+        width: 100%;
+    }
+
+    .filter-section {
+        width: 100%;
     }
 
     .cards-wrapper-2 {
@@ -1178,12 +1287,12 @@ h2#activeTabTitle {
     
     .filter-btn {
         width: 50%;
-        display: inline-block;
+        display: none;
         z-index: 1;
     }
     
     .filter-dropdown {
-        display: none;
+        display: block;
         background-color: white;
         margin-top: 20px;
         box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
@@ -1193,6 +1302,7 @@ h2#activeTabTitle {
         max-width: none;
         width: 100%;
         border-radius: 30px;
+        height: 500px;
     } 
     
     .filter-section {
@@ -1204,12 +1314,36 @@ h2#activeTabTitle {
         margin-bottom: 5px;
     }
     
+    #forSearch {
+        flex-direction: column;
+    }
+
+    .search-container {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .top-filter {
+        margin: 20px;
+        border-radius: 30px;
+    }
+
+    .filter-section-top {
+        width: 100%;
+    }
+
+    .filter-section {
+        width: 100%;
+    }
+
+    .search-container input {
+        padding: 0;
+    }
+
     .filter-section select {
-        width: 80%;
         padding: 8px;
         margin-bottom: 5px;
         border: 1px solid #ddd;
-        border-radius: 4px;
     }
     
     .apply-filters-btn {

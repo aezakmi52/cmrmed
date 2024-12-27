@@ -15,10 +15,10 @@
         <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
         <label for="burger-checkbox" class="burger"></label>
         <ul class="menu-list">
-            <li><a href="?page=home" class="menu-item">Главная</a><li>
-            <li><a href="?page=store" class="menu-item">Каталог</a><li>
-            <li><a href="?page=micro" class="menu-item">Микроорганизмы</a><li>
-            <li><a href="?page=contact" class="menu-item">Контакты</a><li>
+            <li><a href="?page=home" class="menu-item">Главная</a></li>
+            <li><a href="?page=store" class="menu-item">Каталог</a></li>
+            <li><a href="?page=micro" class="menu-item">Микроорганизмы</a></li>
+            <li><a href="?page=contact" class="menu-item">Контакты</a></li>
             <button id="cart-button-mobile">Корзина (<span id="cart-count-mobile">0</span>)</button>
         </ul>
     </div> 
@@ -48,10 +48,10 @@
             <div class="header-inner-bot">
                 <nav>
                     <ul>
-                        <a href="?page=home">Главная</a>    
-                        <a href="?page=store">Каталог</a>
-                        <a href="?page=micro">Микроорганизмы</a> 
-                        <a href="?page=contact">Контакты</a>
+                        <li><a class="nav-link" href="?page=home">Главная</a></li>    
+                        <li><a class="nav-link" href="?page=store">Каталог</a></li>
+                        <li><a class="nav-link" href="?page=micro">Микроорганизмы</a></li>
+                        <li><a class="nav-link" href="?page=contact">Контакты</a></li>
                         <button id="cart-button">Корзина (<span id="cart-count">0</span>)</button>
                     </ul>
                 </nav>
@@ -79,3 +79,4 @@
     </div>
 </header>
 <script src="js/cart.js"></script>
+<script src="js/navColor.js"></script>

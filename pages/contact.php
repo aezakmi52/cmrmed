@@ -1,8 +1,8 @@
 <div class="container">
     <div class="contact-info">
-        <p>Email: прописать</p>
-        <p>Телефон: прописать</p>
-        <p>Адрес: прописать</p>
+        <p>Email: info@cmrmed.ru</p>
+        <p>Телефон: 8 499 68-58-988 / 8 991 174-57-00</p>
+        <p>Адрес: </p>
     </div>
     <div class="feedback">
     <h1>Обратная связь</h1>
