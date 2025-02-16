@@ -46,7 +46,7 @@
             
                 $totalPages = ceil($totalItems / $itemsPerPage);
             
-                $sql .= " GROUP BY id LIMIT $itemsPerPage OFFSET $offset";
+                $sql .= " ORDER BY priority DESC, name ASC LIMIT $itemsPerPage OFFSET $offset";
             
                 $result = $conn->query($sql);
                 ?>
@@ -106,32 +106,33 @@
                         <div class="filter-container">
                             <button class="filter-btn" id="filter-btn">Фильтр</button>
                             <div class="filter-dropdown" id="filter-dropdown">
-                                <div class="micro-filter">
-                                    <h1>Микроорганизмы</h1>
+                            <div class="micro-filter">
+                                <h1>Микроорганизмы</h1>
+                                <div class="micro-overflow">    
                                     <ul id="micro-list">
-    <?php
-    $categoryFilter = isset($_GET['category']) && $_GET['category'] != 'all' ? " AND category_id = '" . $conn->real_escape_string($_GET['category']) . "'" : '';
-    $manufacturerFilter = isset($_GET['manufacturer']) && $_GET['manufacturer'] != 'all' ? " AND fabric_id = '" . $conn->real_escape_string($_GET['manufacturer']) . "'" : '';
+                                        <?php
+                                        $categoryFilter = isset($_GET['category']) && $_GET['category'] != 'all' ? " AND category_id = '" . $conn->real_escape_string($_GET['category']) . "'" : '';
+                                        $manufacturerFilter = isset($_GET['manufacturer']) && $_GET['manufacturer'] != 'all' ? " AND fabric_id = '" . $conn->real_escape_string($_GET['manufacturer']) . "'" : '';
 
-    $sqlMicro = "SELECT DISTINCT micro FROM product WHERE micro != '-' $categoryFilter $manufacturerFilter ORDER BY micro ASC";
-    $resultMicro = $conn->query($sqlMicro);
+                                        $sqlMicro = "SELECT DISTINCT micro FROM product WHERE micro != '-' $categoryFilter $manufacturerFilter ORDER BY micro ASC";
+                                        $resultMicro = $conn->query($sqlMicro);
 
-    if ($resultMicro->num_rows > 0) {
-        while ($rowMicro = $resultMicro->fetch_assoc()) {
-            $microValue = htmlspecialchars($rowMicro['micro']);
-            $isActive = isset($_GET['micro']) && $_GET['micro'] === $microValue ? 'active' : '';
-            echo '<li class="micro-item ' . $isActive . '" data-micro="' . $microValue . '">' . $microValue . '</li>';
-        }
-    } else {
-        echo "<li>Нет данных</li>";
-    }
-    ?>
-</ul>
+                                        if ($resultMicro->num_rows > 0) {
+                                            while ($rowMicro = $resultMicro->fetch_assoc()) {
+                                                $microValue = htmlspecialchars($rowMicro['micro']);
+                                                $isActive = isset($_GET['micro']) && $_GET['micro'] === $microValue ? 'active' : '';
+                                                echo '<li class="micro-item ' . $isActive . '" data-micro="' . $microValue . '">' . $microValue . '</li>';
+                                            }
+                                        } else {
+                                            echo "<li>Нет данных</li>";
+                                        }
+                                        ?>
+                                    </ul>
                                 </div>
-                                <button class="reset-filters-btn" id="reset-filters-btn" onclick="resetFilters()">Сбросить фильтры</button>
-
                             </div>
+                            <button class="reset-filters-btn" id="reset-filters-btn" onclick="resetFilters()">Сбросить фильтры</button>
                         </div>
+                    </div>
             
                         <div class="store-wrapper">
                             <div class="store">

@@ -651,6 +651,7 @@ footer {
 
 .filter-section {
     margin-bottom: 15px;
+    width: 22%;
 }
 
 .filter-section label {
@@ -701,8 +702,12 @@ footer {
     font-size: 15px;
 }
 
-.micro-filter{
+.micro-overflow {
+    height: 86%;
     overflow-y: scroll;
+}
+
+.micro-filter {
     height: 85%;
     border: 2px solid rgb(93, 141, 93);
     border-radius: 20px;
@@ -713,8 +718,8 @@ footer {
     border-bottom: 2px solid rgb(93, 141, 93);
     position: sticky;
     top: 0;
-    background-color: #fff;
-    padding-top: 15px;
+    background-color: transparent;
+    padding: 15px 0;
 }
 
 .micro-item.active {
